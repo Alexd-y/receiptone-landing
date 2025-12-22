@@ -60,8 +60,8 @@
 cd D:\Developer\ReceiptOne\receiptone-landing
 
 # Настройте Git (первый раз)
-git config --global user.name "Ваше Имя"
-git config --global user.email "your.email@example.com"
+git config --global user.name "AlexD"
+git config --global user.email "rukkov@gmail.com"
 
 # Инициализируйте репозиторий
 git init
@@ -70,7 +70,7 @@ git commit -m "ReceiptOne Landing - initial commit"
 
 # Создайте репозиторий на GitHub (через браузер)
 # Затем выполните:
-git remote add origin https://github.com/YOUR_USERNAME/receiptone-landing.git
+git remote add origin https://github.com/Alexd-y/receiptone-landing.git
 git branch -M main
 git push -u origin main
 ```
