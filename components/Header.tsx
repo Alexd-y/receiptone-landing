@@ -25,6 +25,18 @@ export default function Header() {
           >
             Get access
           </a>
+          <a
+            href="/signin"
+            className="hidden rounded-xl px-4 py-2 text-sm font-medium opacity-80 transition hover:opacity-100 sm:inline"
+          >
+            Sign in
+          </a>
+          <a
+            href="/signup"
+            className="hidden rounded-xl bg-accent-primary px-4 py-2 text-sm font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95 sm:inline"
+          >
+            Sign up
+          </a>
           <ThemeToggle />
         </div>
       </div>

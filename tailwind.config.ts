@@ -17,7 +17,7 @@ const config: Config = {
           700: "#1A1A24"
         },
         accent: {
-          primary: "#2563EB",
+          primary: "#0B0B0F",
           secondary: "#10B981"
         }
       },
