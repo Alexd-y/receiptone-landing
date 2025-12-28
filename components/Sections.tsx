@@ -78,8 +78,9 @@ export default function Sections() {
             </h1>
 
             <p className="mt-4 max-w-xl text-sm leading-relaxed opacity-80">
-              Keep evidence structured, reduce “lost receipt” stress, and export accountant-friendly reports. Designed for
-              operators who want speed and clarity — not more admin.
+              Keep your receipts organized, eliminate "lost receipt" stress, and generate accountant-ready reports in minutes.
+              <br />
+              Built for operators who value speed, clarity, and control — not more admin work.
             </p>
 
             <div className="relative mt-6 overflow-visible">
