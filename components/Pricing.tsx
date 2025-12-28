@@ -3,41 +3,44 @@ import { Check } from "lucide-react";
 export default function Pricing() {
   const plans = [
     {
-      name: "PRO — Week",
-      price: "CAD 4.99",
-      period: "per week",
-      badge: "7-day free trial",
-      features: [
+      name: "FREE",
+      price: "CAD 0",
+      period: "/ month / seat, billed annually at $0",
+      description: "Discover for free what ReceiptOne can do for you. Great for personal use.",
+      planIncludes: [
         "Web workspace synced with mobile backend",
         "Bulk upload (drag & drop)",
         "Mileage tracking & trip organization",
         "Reports export for accountant"
-      ]
+      ],
+      keyFeatures: null
     },
     {
-      name: "PRO — Month",
+      name: "PRO",
       price: "CAD 11.99",
-      period: "per month",
-      badge: "Best value for most users",
-      features: [
-        "Everything in Weekly",
+      period: "/ month / seat, billed annually at $144",
+      description: "Boost productivity with our pro tools for small business owners and entrepreneurs.",
+      planIncludes: [
         "Advanced analytics dashboard",
         "Better filtering & faster review flows",
         "Priority support"
-      ]
+      ],
+      includesAllFrom: "FREE",
+      keyFeatures: null
     },
     {
-      name: "PRO — Year",
+      name: "ELITE",
       price: "CAD 129.99",
-      period: "per year",
-      badge: "Most cost-effective",
-      bestDeal: true,
-      features: [
-        "Everything in Monthly",
+      period: "/ month / seat, billed annually at $1,560",
+      description: "Enjoy our premium features. For businesses who take pre-accounting seriously.",
+      planIncludes: [
         "Long-term audit readiness",
         "Team-friendly workflows (lightweight)",
         "Roadmap access program"
-      ]
+      ],
+      includesAllFrom: "PRO",
+      bestDeal: true,
+      keyFeatures: null
     }
   ];
 
@@ -74,45 +77,62 @@ export default function Pricing() {
                 </div>
               </div>
             )}
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <div className="font-[var(--font-ibm)] text-lg font-semibold">{p.name}</div>
-                <div className="mt-1 text-sm opacity-75">{p.badge}</div>
-              </div>
-              <div className="rounded-xl bg-black/5 px-3 py-1 text-xs font-medium dark:bg-white/10">
-                PRO
-              </div>
-            </div>
 
-            <div className="mt-6">
-              <div className="font-[var(--font-ibm)] text-3xl font-semibold">{p.price}</div>
+            {/* Plan Name */}
+            <div className="font-[var(--font-ibm)] text-2xl font-bold">{p.name}</div>
+
+            {/* Price */}
+            <div className="mt-4">
+              <div className="font-[var(--font-ibm)] text-3xl font-bold text-accent-primary">
+                {p.price}
+              </div>
               <div className="mt-1 text-sm opacity-75">{p.period}</div>
             </div>
 
-            <ul className="mt-6 space-y-3 text-sm">
-              {p.features.map((f) => (
-                <li key={f} className="flex items-start gap-2">
-                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-lg bg-accent-secondary/15 text-accent-secondary">
-                    <Check size={14} />
-                  </span>
-                  <span className="opacity-90">{f}</span>
-                </li>
-              ))}
-            </ul>
+            {/* Description */}
+            <p className="mt-4 text-sm opacity-80">{p.description}</p>
 
+            {/* Plan Includes */}
+            <div className="mt-6">
+              {p.includesAllFrom ? (
+                <div className="mb-3 text-sm font-medium opacity-90">
+                  All {p.includesAllFrom} Features, Plus:
+                </div>
+              ) : (
+                <div className="mb-3 text-sm font-medium opacity-90">Plan Includes:</div>
+              )}
+              <ul className="space-y-3 text-sm">
+                {p.planIncludes.map((f) => (
+                  <li key={f} className="flex items-start gap-2">
+                    <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-lg bg-green-500/20 text-green-600 dark:text-green-400">
+                      <Check size={14} />
+                    </span>
+                    <span className="opacity-90">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* CTA Button */}
             <a
               href="#lead"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-ink-900 px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95 dark:bg-white dark:text-ink-900"
+              className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-accent-primary px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95"
             >
-              Start free
+              START FOR FREE
             </a>
+
+            {/* Footer */}
+            <div className="mt-6 space-y-1 text-center text-xs opacity-70">
+              <div>No Credit Card Required</div>
+              <div>60-Day-Money-Back Guarantee</div>
+            </div>
           </div>
         ))}
       </div>
 
       <div className="mt-6 rounded-xl2 bg-white/60 p-5 text-sm shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
         <strong>Coming soon:</strong> QuickBooks / Plaid integrations, deeper accountant workflows, and expanded exports —
-        shipped as “opt-in” improvements.
+        shipped as "opt-in" improvements.
       </div>
     </section>
   );
