@@ -3,9 +3,9 @@ import { Check } from "lucide-react";
 export default function Pricing() {
   const plans = [
     {
-      name: "FREE",
-      price: "CAD 0",
-      period: "per month",
+      name: "PRO — Week",
+      price: "CAD 4.99",
+      period: "per week",
       badge: "7-day free trial",
       description: "Discover for free what ReceiptOne can do for you. Great for personal use.",
       keyFeatures: [
@@ -95,9 +95,9 @@ export default function Pricing() {
                 <div className="font-[var(--font-ibm)] text-2xl font-bold">{p.name}</div>
                 {p.badge && <div className="mt-1 text-sm opacity-75">{p.badge}</div>}
               </div>
-              {p.name === "FREE" && (
+              {p.name === "PRO — Week" && (
                 <div className="rounded-xl bg-black/5 px-3 py-1 text-xs font-medium dark:bg-white/10">
-                  FREE
+                  PRO
                 </div>
               )}
             </div>
