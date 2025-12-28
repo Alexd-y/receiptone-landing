@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BarChart3, FileText, Gauge, UploadCloud, Wallet } from "lucide-react";
+import { BarChart3, FileText, Gauge, UploadCloud, Wallet, Sparkles, Zap, Brain } from "lucide-react";
 import CTAButtons from "@/components/CTAButtons";
 import SocialProof from "@/components/SocialProof";
 import Pricing from "@/components/Pricing";
@@ -13,29 +13,34 @@ export default function Sections() {
 
   const features = [
     {
-      icon: <UploadCloud size={18} />,
+      icon: <UploadCloud size={20} />,
       title: "Less admin, more billable time",
-      desc: "Drag & drop receipts in bulk and review them fast — stop losing hours to manual organization."
+      desc: "Drag & drop receipts in bulk and review them fast — stop losing hours to manual organization.",
+      aiPowered: true
     },
     {
-      icon: <Gauge size={18} />,
+      icon: <Gauge size={20} />,
       title: "Mileage and trips stay consistent",
-      desc: "Track drives with clean categorization so deductions and reports don’t turn into guesswork."
+      desc: "Track drives with clean categorization so deductions and reports don't turn into guesswork.",
+      aiPowered: true
     },
     {
-      icon: <BarChart3 size={18} />,
+      icon: <BarChart3 size={20} />,
       title: "Reports that accountants can use",
-      desc: "Generate exports and summaries that reduce back-and-forth and speed up month-end."
+      desc: "Generate exports and summaries that reduce back-and-forth and speed up month-end.",
+      aiPowered: false
     },
     {
-      icon: <FileText size={18} />,
+      icon: <FileText size={20} />,
       title: "Audit-ready documentation habits",
-      desc: "Receipts + metadata + consistent logs — structured to reduce “missing proof” risk."
+      desc: "Receipts + metadata + consistent logs — structured to reduce missing proof risk.",
+      aiPowered: false
     },
     {
-      icon: <Wallet size={18} />,
+      icon: <Wallet size={20} />,
       title: "One ecosystem: mobile + web",
-      desc: `Web workspace complements the ${appName} mobile app using the same backend data.`
+      desc: `Web workspace complements the ${appName} mobile app using the same backend data.`,
+      aiPowered: false
     }
   ];
 
@@ -64,20 +69,31 @@ export default function Sections() {
       <section className="mx-auto max-w-6xl px-6 pb-10 pt-12">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="overflow-visible">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 rounded-xl bg-white/60 px-3 py-2 text-xs font-medium shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10"
-            >
-              Built for US/Canada self-employed & small business
-            </motion.div>
+            <div className="flex flex-wrap items-center gap-2">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="inline-flex items-center gap-2 rounded-2xl bg-white/80 px-4 py-2.5 text-xs font-medium shadow-lg ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+              >
+                Built for US/Canada self-employed & small business
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="inline-flex items-center gap-1.5 rounded-2xl bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-4 py-2.5 text-xs font-semibold text-accent-secondary shadow-lg ring-1 ring-accent-secondary/20 backdrop-blur-xl"
+              >
+                <Sparkles size={14} className="animate-pulse" />
+                <span>AI-Powered</span>
+              </motion.div>
+            </div>
 
-            <h1 className="mt-4 font-[var(--font-ibm)] text-4xl font-semibold leading-tight sm:text-5xl">
+            <h1 className="mt-6 font-[var(--font-ibm)] text-5xl font-bold leading-[1.1] tracking-tight sm:text-6xl">
               Track receipts and mileage. Export tax-ready reports.
             </h1>
 
-            <p className="mt-4 max-w-xl text-sm leading-relaxed opacity-80">
+            <p className="mt-6 max-w-xl text-base leading-relaxed opacity-80">
               Keep receipts organized, eliminate "lost receipt" stress, and generate accountant-ready reports in minutes.
               <br />
               Built for speed and clarity — without extra admin.
@@ -87,38 +103,83 @@ export default function Sections() {
               <CTAButtons onPrimaryClick={() => document.getElementById("lead")?.scrollIntoView({ behavior: "smooth" })} />
             </div>
 
-            <div className="mt-6 rounded-xl2 bg-white/60 p-5 text-sm shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-              <div className="font-[var(--font-ibm)] font-semibold">What you get with ReceiptOne Web</div>
-              <ul className="mt-2 list-disc pl-5 opacity-85">
-                <li><strong>Bulk receipt upload & quick review</strong></li>
-                <li><strong>Expense analytics with CSV & PDF exports</strong></li>
-                <li><strong>Mileage and trip tracking</strong></li>
-                <li><strong>Tax-ready reports and document storage</strong></li>
-                <li><strong>Built-in referral system</strong></li>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              className="mt-8 rounded-3xl bg-white/80 p-6 text-sm shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <div className="inline-flex items-center justify-center rounded-xl bg-accent-secondary/10 p-2">
+                  <Zap size={16} className="text-accent-secondary" />
+                </div>
+                <div className="font-[var(--font-ibm)] text-base font-semibold">What you get with ReceiptOne Web</div>
+              </div>
+              <ul className="space-y-3 opacity-90">
+                <li className="flex items-start gap-3">
+                  <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-secondary shrink-0"></div>
+                  <span className="font-medium">Bulk receipt upload & quick review</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-secondary shrink-0"></div>
+                  <span className="font-medium">Expense analytics with CSV & PDF exports</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-secondary shrink-0"></div>
+                  <span className="font-medium">Mileage and trip tracking</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-secondary shrink-0"></div>
+                  <span className="font-medium">Tax-ready reports and document storage</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-secondary shrink-0"></div>
+                                   <span className="font-medium">Built-in referral system</span>
+                </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="grid gap-4">
-            <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-              <div className="text-sm font-medium opacity-80">Receipt organization</div>
-              <div className="mt-2 h-40 text-ink-900/70 dark:text-white/70">
+          <div className="grid gap-5">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
+                  <Brain size={18} className="text-accent-secondary" />
+                </div>
+                <div className="text-sm font-semibold opacity-90">AI Receipt organization</div>
+              </div>
+              <div className="mt-4 h-40 text-ink-900/70 dark:text-white/70">
                 <DoodleReceipt />
               </div>
-              <div className="mt-2 text-sm opacity-80">
+              <div className="mt-4 text-sm leading-relaxed opacity-80">
                 Upload, tag, and keep receipts consistently — stop digging through inboxes and photo rolls.
               </div>
-            </div>
+            </motion.div>
 
-            <div className="rounded-xl2 bg-white/60 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-              <div className="text-sm font-medium opacity-80">Mileage tracking</div>
-              <div className="mt-2 h-40 text-ink-900/70 dark:text-white/70">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
+                  <Gauge size={18} className="text-accent-secondary" />
+                </div>
+                <div className="text-sm font-semibold opacity-90">Smart Mileage tracking</div>
+              </div>
+              <div className="mt-4 h-40 text-ink-900/70 dark:text-white/70">
                 <DoodleMileage />
               </div>
-              <div className="mt-2 text-sm opacity-80">
+              <div className="mt-4 text-sm leading-relaxed opacity-80">
                 Trip logs that stay coherent over time — deductions become straightforward, not chaotic.
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -176,37 +237,52 @@ export default function Sections() {
       </section>
 
       {/* Features */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <div className="text-sm font-medium opacity-80">Benefits</div>
-            <h2 className="mt-2 font-[var(--font-ibm)] text-3xl font-semibold">
+            <div className="inline-flex items-center gap-2 rounded-2xl bg-white/80 px-4 py-2 text-xs font-medium shadow-lg ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10 mb-4">
+              <Sparkles size={12} className="text-accent-secondary" />
+              <span>Benefits</span>
+            </div>
+            <h2 className="mt-2 font-[var(--font-ibm)] text-4xl font-bold tracking-tight">
               A calm workflow for receipts and reporting
             </h2>
-            <p className="mt-3 max-w-2xl text-sm opacity-80">
-              The point is not “more features.” The point is fewer errors, faster month-end, and better evidence quality.
+            <p className="mt-4 max-w-2xl text-base leading-relaxed opacity-80">
+              The point is not "more features." The point is fewer errors, faster month-end, and better evidence quality.
             </p>
           </div>
           <a
             href="#lead"
-            className="inline-flex items-center justify-center rounded-xl bg-white/70 px-5 py-3 font-medium shadow-glass ring-1 ring-black/5 backdrop-blur-md transition hover:translate-y-[-1px] hover:shadow-soft dark:bg-white/10 dark:ring-white/10"
+            className="inline-flex items-center justify-center rounded-2xl bg-white/90 px-6 py-3.5 font-semibold shadow-xl ring-1 ring-black/5 backdrop-blur-xl transition-all hover:scale-105 hover:shadow-2xl active:scale-95 dark:bg-white/10 dark:ring-white/10"
           >
             Get early access
           </a>
         </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((f) => (
-            <div
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((f, idx) => (
+            <motion.div
               key={f.title}
-              className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
+              className="group rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl transition-all hover:shadow-2xl hover:-translate-y-1 dark:bg-white/10 dark:ring-white/10"
             >
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-black/5 dark:bg-white/10">
-                {f.icon}
+              <div className="flex items-start justify-between mb-4">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-accent-secondary/20 to-accent-secondary/10 shadow-lg ring-1 ring-accent-secondary/10">
+                  {f.icon}
+                </div>
+                {f.aiPowered && (
+                  <div className="inline-flex items-center gap-1 rounded-xl bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-2.5 py-1 text-[10px] font-semibold text-accent-secondary ring-1 ring-accent-secondary/20">
+                    <Sparkles size={10} />
+                    <span>AI</span>
+                  </div>
+                )}
               </div>
-              <div className="mt-4 font-[var(--font-ibm)] text-lg font-semibold">{f.title}</div>
-              <p className="mt-2 text-sm opacity-80">{f.desc}</p>
-            </div>
+              <div className="font-[var(--font-ibm)] text-xl font-bold tracking-tight">{f.title}</div>
+              <p className="mt-3 text-sm leading-relaxed opacity-80">{f.desc}</p>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -224,26 +300,37 @@ export default function Sections() {
               Snap photos or upload files of receipts and invoices. ReceiptOne processes and categorizes them with high accuracy, storing them neatly for easy searching, reporting, and tax purposes. Eliminate manual work and keep everything at your fingertips.
             </p>
           </div>
-          <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-            <div className="text-sm font-medium opacity-80 mb-4">Scan & Organize</div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+          >
+            <div className="flex items-center gap-2 mb-5">
+              <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
+                <Sparkles size={16} className="text-accent-secondary" />
+              </div>
+              <div className="text-sm font-semibold opacity-90">AI Scan & Organize</div>
+            </div>
             <div className="space-y-3">
-              <div className="rounded-lg bg-white/60 p-4 dark:bg-white/5">
+              <div className="rounded-2xl bg-white/80 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10">
                 <div className="text-xs opacity-60">04/30/2025</div>
                 <div className="font-semibold mt-1">Currys PC World</div>
                 <div className="text-xs mt-1 opacity-75">IT Supplies • $229</div>
               </div>
-              <div className="rounded-lg bg-white/60 p-4 dark:bg-white/5">
+              <div className="rounded-2xl bg-white/80 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10">
                 <div className="text-xs opacity-60">04/29/2025</div>
                 <div className="font-semibold mt-1">SHELL GAS STATION</div>
                 <div className="text-xs mt-1 opacity-75">Fuel & Transportation • $29.50</div>
               </div>
-              <div className="rounded-lg bg-white/60 p-4 dark:bg-white/5">
+              <div className="rounded-2xl bg-white/80 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10">
                 <div className="text-xs opacity-60">04/28/2025</div>
                 <div className="font-semibold mt-1">Cafe Morgenrot</div>
                 <div className="text-xs mt-1 opacity-75">Miscellaneous • $6.50</div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -251,51 +338,63 @@ export default function Sections() {
       <section className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
-            <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="rounded-full bg-green-500/20 p-3">
-                  <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+            >
+              <div className="flex items-center gap-4 mb-5">
+                <div className="rounded-2xl bg-gradient-to-br from-accent-secondary/20 to-accent-secondary/10 p-3 shadow-lg ring-1 ring-accent-secondary/20">
+                  <svg className="w-6 h-6 text-accent-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <div className="text-sm font-medium">Email Receipt Processing</div>
+                  <div className="flex items-center gap-2">
+                    <div className="text-sm font-semibold">AI Email Receipt Processing</div>
+                    <div className="inline-flex items-center gap-1 rounded-lg bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-2 py-0.5 text-[10px] font-semibold text-accent-secondary ring-1 ring-accent-secondary/20">
+                      <Sparkles size={8} />
+                      <span>AI</span>
+                    </div>
+                  </div>
                   <div className="text-xs opacity-60 mt-1">Automatic categorization</div>
                 </div>
               </div>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+              <div className="space-y-3 text-sm">
+                <div className="flex items-center gap-3 rounded-xl bg-white/60 p-2.5 dark:bg-white/5">
+                  <svg className="w-5 h-5 text-accent-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="opacity-80">MERCHANT</span>
+                  <span className="opacity-80 font-medium">MERCHANT</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center gap-3 rounded-xl bg-white/60 p-2.5 dark:bg-white/5">
+                  <svg className="w-5 h-5 text-accent-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="opacity-80">DATE</span>
+                  <span className="opacity-80 font-medium">DATE</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center gap-3 rounded-xl bg-white/60 p-2.5 dark:bg-white/5">
+                  <svg className="w-5 h-5 text-accent-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="opacity-80">TOTAL</span>
+                  <span className="opacity-80 font-medium">TOTAL</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center gap-3 rounded-xl bg-white/60 p-2.5 dark:bg-white/5">
+                  <svg className="w-5 h-5 text-accent-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="opacity-80">PAYMENT METHOD</span>
+                  <span className="opacity-80 font-medium">PAYMENT METHOD</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center gap-3 rounded-xl bg-white/60 p-2.5 dark:bg-white/5">
+                  <svg className="w-5 h-5 text-accent-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="opacity-80">CATEGORY</span>
+                  <span className="opacity-80 font-medium">CATEGORY</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="order-1 lg:order-2">
             <h2 className="font-[var(--font-ibm)] text-3xl font-semibold">
@@ -319,64 +418,86 @@ export default function Sections() {
               Store and categorize receipts in any language. ReceiptOne uses AI and OCR for Latin-based scripts, supporting English, French, German, Spanish, Japanese, and Finnish. Manage receipts in 150+ currencies with automatic exchange rates and apply local tax rules — including multi-rate systems like GST and PST — for compliant records.
             </p>
           </div>
-          <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-            <div className="text-sm font-medium opacity-80 mb-4">Multi-Currency Support</div>
-            <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-lg bg-white/60 p-3 dark:bg-white/5 text-center">
-                <div className="text-2xl font-bold">$</div>
-                <div className="text-xs opacity-60 mt-1">USD</div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+          >
+            <div className="flex items-center gap-2 mb-5">
+              <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
+                <Sparkles size={16} className="text-accent-secondary" />
               </div>
-              <div className="rounded-lg bg-white/60 p-3 dark:bg-white/5 text-center">
-                <div className="text-2xl font-bold">€</div>
-                <div className="text-xs opacity-60 mt-1">EUR</div>
+              <div className="text-sm font-semibold opacity-90">AI Multi-Currency Support</div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-2xl bg-gradient-to-br from-white/80 to-white/60 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10 text-center transition-all hover:scale-105">
+                <div className="text-3xl font-bold">$</div>
+                <div className="text-xs opacity-60 mt-2 font-medium">USD</div>
               </div>
-              <div className="rounded-lg bg-white/60 p-3 dark:bg-white/5 text-center">
-                <div className="text-2xl font-bold">£</div>
-                <div className="text-xs opacity-60 mt-1">GBP</div>
+              <div className="rounded-2xl bg-gradient-to-br from-white/80 to-white/60 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10 text-center transition-all hover:scale-105">
+                <div className="text-3xl font-bold">€</div>
+                <div className="text-xs opacity-60 mt-2 font-medium">EUR</div>
               </div>
-              <div className="rounded-lg bg-white/60 p-3 dark:bg-white/5 text-center">
-                <div className="text-2xl font-bold">¥</div>
-                <div className="text-xs opacity-60 mt-1">JPY</div>
+              <div className="rounded-2xl bg-gradient-to-br from-white/80 to-white/60 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10 text-center transition-all hover:scale-105">
+                <div className="text-3xl font-bold">£</div>
+                <div className="text-xs opacity-60 mt-2 font-medium">GBP</div>
+              </div>
+              <div className="rounded-2xl bg-gradient-to-br from-white/80 to-white/60 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10 text-center transition-all hover:scale-105">
+                <div className="text-3xl font-bold">¥</div>
+                <div className="text-xs opacity-60 mt-2 font-medium">JPY</div>
               </div>
             </div>
-            <div className="mt-4 text-xs opacity-60 text-center">+ 150+ more currencies</div>
-          </div>
+            <div className="mt-5 text-xs opacity-60 text-center font-medium">+ 150+ more currencies</div>
+          </motion.div>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
-            <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-              <div className="text-sm font-medium opacity-80 mb-4">Expense Report</div>
-              <div className="space-y-2 text-xs">
-                <div className="flex justify-between py-2 border-b border-black/5 dark:border-white/10">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+            >
+              <div className="flex items-center gap-2 mb-5">
+                <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
+                  <FileText size={16} className="text-accent-secondary" />
+                </div>
+                <div className="text-sm font-semibold opacity-90">AI Expense Report</div>
+              </div>
+              <div className="space-y-3 text-sm">
+                <div className="flex justify-between py-3 px-4 rounded-xl bg-white/60 border border-black/5 dark:bg-white/5 dark:border-white/10">
                   <span className="opacity-80">Professional Services (EUR)</span>
                   <span className="font-semibold">€2,100.00</span>
                 </div>
-                <div className="flex justify-between py-2 border-b border-black/5 dark:border-white/10">
+                <div className="flex justify-between py-3 px-4 rounded-xl bg-white/60 border border-black/5 dark:bg-white/5 dark:border-white/10">
                   <span className="opacity-80">Marketing (EUR)</span>
                   <span className="font-semibold">€1,255.00</span>
                 </div>
-                <div className="flex justify-between py-2 border-b border-black/5 dark:border-white/10">
+                <div className="flex justify-between py-3 px-4 rounded-xl bg-white/60 border border-black/5 dark:bg-white/5 dark:border-white/10">
                   <span className="opacity-80">Subscriptions (USD)</span>
                   <span className="font-semibold">$66.59</span>
                 </div>
-                <div className="flex justify-between py-2">
+                <div className="flex justify-between py-3 px-4 rounded-xl bg-white/60 border border-black/5 dark:bg-white/5 dark:border-white/10">
                   <span className="opacity-80">Healthcare (EUR)</span>
                   <span className="font-semibold">€240.00</span>
                 </div>
               </div>
-              <button className="mt-6 w-full rounded-xl bg-accent-primary px-4 py-2 text-sm font-medium text-white">
+              <button className="mt-6 w-full rounded-2xl bg-accent-primary px-5 py-3.5 text-sm font-semibold text-white shadow-lg transition-all hover:scale-105 active:scale-95">
                 EXPORT
               </button>
-            </div>
+            </motion.div>
           </div>
           <div className="order-1 lg:order-2">
-            <h2 className="font-[var(--font-ibm)] text-3xl font-semibold">
+            <h2 className="font-[var(--font-ibm)] text-4xl font-bold tracking-tight">
               Turn Organized Receipts into Audit-Ready Reports
             </h2>
-            <p className="mt-4 text-sm leading-relaxed opacity-80">
+            <p className="mt-5 text-base leading-relaxed opacity-80">
               Export clean, structured reports in PDF or Excel with totals, categories, taxes, and links to original receipts — ready for your accountant or tax authorities. Filter by date, category, tag, user, vendor, tax breakdown, document type, and currency conversions. Generate audit-ready reports with one click.
             </p>
           </div>
@@ -387,15 +508,26 @@ export default function Sections() {
       <section className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <h2 className="font-[var(--font-ibm)] text-3xl font-semibold">
+            <h2 className="font-[var(--font-ibm)] text-4xl font-bold tracking-tight">
               Invite Your Accountant for Maximum Efficiency
             </h2>
-            <p className="mt-4 text-sm leading-relaxed opacity-80">
+            <p className="mt-5 text-base leading-relaxed opacity-80">
               ReceiptOne organizes your receipts and gives your accountant free access to your archive without using a seat. Everything is matched and ready, helping your accountant save time and focus on what matters most.
             </p>
           </div>
-          <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-            <div className="text-sm font-medium opacity-80 mb-4">Team Collaboration</div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+          >
+            <div className="flex items-center gap-2 mb-5">
+              <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
+                <Wallet size={16} className="text-accent-secondary" />
+              </div>
+              <div className="text-sm font-semibold opacity-90">Team Collaboration</div>
+            </div>
             <div className="flex items-center gap-3">
               <div className="rounded-full bg-blue-500/20 p-3">
                 <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -406,11 +538,11 @@ export default function Sections() {
                 <div className="font-semibold">Accountant Access</div>
                 <div className="text-xs opacity-60 mt-1">Free access to your archive</div>
               </div>
-              <button className="rounded-xl bg-accent-primary px-4 py-2 text-sm font-medium text-white">
+              <button className="rounded-2xl bg-accent-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:scale-105 active:scale-95">
                 INVITE
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -461,10 +593,10 @@ export default function Sections() {
       {/* Receipt Tracking Made Magical */}
       <section className="mx-auto max-w-6xl px-6 py-14">
         <div className="text-center mb-12">
-          <h2 className="font-[var(--font-ibm)] text-4xl font-bold">
+          <h2 className="font-[var(--font-ibm)] text-5xl font-bold tracking-tight">
             Receipt tracking made magical
           </h2>
-          <p className="mt-3 text-sm opacity-80">
+          <p className="mt-4 text-base opacity-80">
             ReceiptOne has already found over $500 million in tax deductions and reimbursements.
           </p>
         </div>
@@ -603,8 +735,19 @@ export default function Sections() {
               </li>
             </ul>
           </div>
-          <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-            <div className="text-sm font-medium opacity-80 mb-4">Mileage Tracking</div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+            >
+              <div className="flex items-center gap-2 mb-5">
+                <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
+                  <Gauge size={16} className="text-accent-secondary" />
+                </div>
+                <div className="text-sm font-semibold opacity-90">AI Mileage Tracking</div>
+              </div>
             <div className="rounded-lg bg-gray-100 h-32 mb-4 flex items-center justify-center dark:bg-gray-800">
               <span className="text-xs opacity-60">Map View</span>
             </div>
@@ -625,17 +768,30 @@ export default function Sections() {
               </div>
             </div>
             <div className="mt-4 pt-4 border-t border-black/5 dark:border-white/10">
-              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">$7.49</div>
+              <div className="text-2xl font-bold text-accent-secondary">$7.49</div>
               <div className="text-sm opacity-75">12.3 Miles</div>
             </div>
-          </div>
+          </motion.div>
         </div>
+      </section>
 
-        {/* Connect accounts and find deductions */}
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center mt-12">
+      {/* Connect accounts and find deductions */}
+      <section className="mx-auto max-w-6xl px-6 py-14">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
-            <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-              <div className="text-sm font-medium opacity-80 mb-4">Tax Deductions</div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+            >
+              <div className="flex items-center gap-2 mb-5">
+                <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
+                  <Brain size={16} className="text-accent-secondary" />
+                </div>
+                <div className="text-sm font-semibold opacity-90">AI Tax Deductions</div>
+              </div>
               <div className="space-y-3">
                 <div className="rounded-lg bg-blue-500/10 p-3 border border-blue-500/20">
                   <div className="flex items-center justify-between mb-1">
@@ -677,7 +833,7 @@ export default function Sections() {
                   <div className="font-bold text-white">$217.28</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="order-1 lg:order-2">
             <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
