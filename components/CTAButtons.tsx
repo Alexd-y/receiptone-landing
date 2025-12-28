@@ -58,11 +58,11 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
       <button
         type="button"
         onClick={onPrimaryClick}
-        className="relative z-10 inline-flex flex-col items-center justify-center gap-1.5 rounded-xl bg-accent-primary px-5 py-4 font-medium text-white shadow-md transition-all hover:shadow-lg text-center min-w-0"
+        className="relative z-10 inline-flex flex-row items-center justify-center gap-3 rounded-xl bg-accent-primary px-6 py-4 font-medium text-white shadow-md transition-all hover:shadow-lg min-w-0"
       >
-        {/* Sparkles icon сверху */}
+        {/* Sparkles icon слева */}
         <Sparkles size={18} />
-        <span className="text-base leading-tight">Get early<br />access</span>
+        <span className="text-base leading-tight text-left">Get early<br />access</span>
       </button>
 
       {/* Secondary Buttons - светлые бежевые кнопки в одну строчку */}
