@@ -83,7 +83,7 @@ export default function Sections() {
               operators who want speed and clarity — not more admin.
             </p>
 
-            <div className="mt-6">
+            <div className="mt-6 overflow-hidden">
               <CTAButtons onPrimaryClick={() => document.getElementById("lead")?.scrollIntoView({ behavior: "smooth" })} />
             </div>
 

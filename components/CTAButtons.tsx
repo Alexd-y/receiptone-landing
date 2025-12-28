@@ -11,7 +11,7 @@ type Props = {
 function LoopArrow() {
   return (
     <motion.div
-      className="absolute -left-28 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none z-0"
+      className="absolute -left-20 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none z-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
@@ -23,7 +23,7 @@ function LoopArrow() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="opacity-50"
-        style={{ transform: "scale(0.5)" }}
+        style={{ transform: "scale(0.4)" }}
       >
         <motion.path
           d="M1.00086 1.0002C5 47.5 90.9121 76.0476 125.491 67.7791C130.884 66.4897 143.009 61.3843 138.817 53.2959C135.138 46.1976 122.209 39.6256 115.289 40.8747C97.278 44.126 76.2063 54.1059 90.1515 77.0838C105.333 102.098 136.601 124.212 161.168 139.266C173.085 146.568 187.88 154.495 200.975 158.366C209.667 160.937 203.071 156.485 198.794 152.327C192.711 146.413 178.665 132.758 192.132 145.85C197.605 151.17 204.311 156.241 210.401 159.8C216.911 163.605 203.761 161.216 202.01 161.442C196.491 162.154 188.757 164.463 185.007 168.321"
@@ -46,7 +46,7 @@ function LoopArrow() {
 
 export default function CTAButtons({ onPrimaryClick }: Props) {
   return (
-    <div className="relative flex flex-col gap-3 sm:flex-row sm:items-center pl-8 lg:pl-28 overflow-visible">
+    <div className="relative flex flex-col gap-3 sm:flex-row sm:items-center pl-8 lg:pl-20 overflow-hidden">
       {/* Loop Arrow - слева, указывает на кнопку "Get early access" */}
       <LoopArrow />
 
