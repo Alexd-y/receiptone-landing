@@ -8,6 +8,7 @@ type Props = {
 };
 
 // Компонент стрелки с петлей (точный SVG путь из дизайна, указывает на кнопку "Get early access")
+// Стрелка без фона, сливается с фоном страницы
 function LoopArrow() {
   return (
     <motion.div
@@ -15,6 +16,7 @@ function LoopArrow() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
+      style={{ background: "transparent" }}
     >
       <svg
         width="214"
@@ -22,8 +24,7 @@ function LoopArrow() {
         viewBox="0 0 214 170"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="opacity-50"
-        style={{ transform: "scale(0.4)" }}
+        style={{ transform: "scale(0.4)", background: "transparent" }}
       >
         <motion.path
           d="M1.00086 1.0002C5 47.5 90.9121 76.0476 125.491 67.7791C130.884 66.4897 143.009 61.3843 138.817 53.2959C135.138 46.1976 122.209 39.6256 115.289 40.8747C97.278 44.126 76.2063 54.1059 90.1515 77.0838C105.333 102.098 136.601 124.212 161.168 139.266C173.085 146.568 187.88 154.495 200.975 158.366C209.667 160.937 203.071 156.485 198.794 152.327C192.711 146.413 178.665 132.758 192.132 145.85C197.605 151.17 204.311 156.241 210.401 159.8C216.911 163.605 203.761 161.216 202.01 161.442C196.491 162.154 188.757 164.463 185.007 168.321"
@@ -47,7 +48,7 @@ function LoopArrow() {
 export default function CTAButtons({ onPrimaryClick }: Props) {
   return (
     <div className="relative flex flex-wrap gap-3 items-center pl-8 lg:pl-20">
-      {/* Loop Arrow - слева, указывает на кнопку "Get early access" */}
+      {/* Loop Arrow - слева, указывает на кнопку "Get early access", без фона */}
       <LoopArrow />
 
       {/* Primary Button - Get early access (черная кнопка с белым текстом) */}
@@ -65,7 +66,7 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
         <ArrowRight size={18} />
       </button>
 
-      {/* Secondary Buttons - светлые бежевые кнопки */}
+      {/* Secondary Buttons - светлые бежевые кнопки в один ряд */}
       <div className="flex flex-wrap gap-3">
         {/* Start free - светлая бежевая кнопка с темным текстом, стрелка справа */}
         <a
@@ -76,13 +77,14 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
           <ArrowRight size={18} />
         </a>
 
-        {/* Book a demo - светлая бежевая кнопка с темным текстом, календарь слева */}
+        {/* Book a demo - светлая бежевая кнопка с темным текстом, календарь слева и стрелка справа */}
         <a
           href="#lead"
           className="relative z-10 inline-flex items-center justify-center gap-2 rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10"
         >
           <Calendar size={18} />
           <span className="whitespace-nowrap">Book a demo</span>
+          <ArrowRight size={18} />
         </a>
 
         {/* Download app - светлая бежевая кнопка с темным текстом, иконка загрузки слева */}
