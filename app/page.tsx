@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Sections from "@/components/Sections";
 import Footer from "@/components/Footer";
+import TalkToSales from "@/components/TalkToSales";
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
       <Header />
       <Sections />
       <Footer />
+      <TalkToSales />
     </main>
   );
 }
