@@ -5,7 +5,8 @@ export default function Pricing() {
     {
       name: "FREE",
       price: "CAD 0",
-      period: "/ month / seat, billed annually at $0",
+      period: "per month",
+      badge: "7-day free trial",
       description: "Discover for free what ReceiptOne can do for you. Great for personal use.",
       keyFeatures: [
         { value: "100", label: "AI Scans / Month" },
@@ -19,11 +20,9 @@ export default function Pricing() {
         "AI-Powered Expense & Income Tracking",
         "Mobile and Web App with Real-Time Sync",
         "Auto-Forward Email Receipts",
-        "Supports 150+ Currencies",
         "Secure Storage for 10+ Years",
-        "Expense Reports (CSV, PDF, Excel)",
-        "Export Your Data (PDF, Excel, CSV, ZIP)",
-        "Share Documents via Link",
+        "Expense Reports (CSV, PDF)",
+        "Export Your Data (PDF, CSV)",
         "Invite Your Accountant"
       ]
     },
@@ -90,8 +89,18 @@ export default function Pricing() {
               </div>
             )}
 
-            {/* Plan Name */}
-            <div className="font-[var(--font-ibm)] text-2xl font-bold">{p.name}</div>
+            {/* Plan Name and Badge */}
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <div className="font-[var(--font-ibm)] text-2xl font-bold">{p.name}</div>
+                {p.badge && <div className="mt-1 text-sm opacity-75">{p.badge}</div>}
+              </div>
+              {p.name === "FREE" && (
+                <div className="rounded-xl bg-black/5 px-3 py-1 text-xs font-medium dark:bg-white/10">
+                  FREE
+                </div>
+              )}
+            </div>
 
             {/* Price */}
             <div className="mt-4">
