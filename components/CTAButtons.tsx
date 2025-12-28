@@ -50,7 +50,7 @@ function LoopArrow() {
 
 export default function CTAButtons({ onPrimaryClick }: Props) {
   return (
-    <div className="relative flex flex-wrap gap-3 items-center pl-8 lg:pl-0 max-w-full overflow-hidden">
+    <div className="relative flex flex-nowrap gap-3 items-center pl-8 lg:pl-0 max-w-full overflow-hidden">
       {/* Loop Arrow - левее всех кнопок и полей, указывает на кнопку "Get early access", без фона, тонкая с пониженной непрозрачностью */}
       <LoopArrow />
 
@@ -64,30 +64,25 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
         <Sparkles size={18} />
 
         <span>Get early access</span>
-
-        {/* Arrow справа */}
-        <ArrowRight size={18} />
       </button>
 
-      {/* Secondary Buttons - светлые бежевые кнопки */}
-      <div className="flex flex-wrap gap-3">
-        {/* Start free - светлая бежевая кнопка с темным текстом, стрелка справа */}
+      {/* Secondary Buttons - светлые бежевые кнопки в одну строчку */}
+      <div className="flex flex-nowrap gap-3">
+        {/* Start free - светлая бежевая кнопка с темным текстом */}
         <a
           href="#pricing"
           className="relative z-10 inline-flex items-center justify-center gap-2 rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
         >
           <span>Start free</span>
-          <ArrowRight size={18} />
         </a>
 
-        {/* Book a demo - светлая бежевая кнопка с темным текстом, календарь слева и стрелка справа */}
+        {/* Book a demo - светлая бежевая кнопка с темным текстом, календарь слева */}
         <a
           href="#lead"
           className="relative z-10 inline-flex items-center justify-center gap-2 rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
         >
           <Calendar size={18} />
           <span>Book a demo</span>
-          <ArrowRight size={18} />
         </a>
 
         {/* Download app - светлая бежевая кнопка с темным текстом, иконка загрузки слева */}
