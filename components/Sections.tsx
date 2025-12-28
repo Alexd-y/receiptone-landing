@@ -62,8 +62,8 @@ export default function Sections() {
     <>
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pb-10 pt-12">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-          <div>
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+          <div className="overflow-hidden">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export default function Sections() {
               operators who want speed and clarity — not more admin.
             </p>
 
-            <div className="mt-6 overflow-hidden">
+            <div className="mt-6">
               <CTAButtons onPrimaryClick={() => document.getElementById("lead")?.scrollIntoView({ behavior: "smooth" })} />
             </div>
 
