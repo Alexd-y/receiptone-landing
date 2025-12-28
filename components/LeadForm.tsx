@@ -195,15 +195,23 @@ export default function LeadForm() {
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             <a
               href="#"
-              className="inline-flex items-center justify-center rounded-xl bg-ink-900 px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95 dark:bg-white dark:text-ink-900"
+              className="inline-flex items-center justify-center rounded-xl transition hover:translate-y-[-1px] hover:opacity-90"
             >
-              App Store (add link)
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
+                alt="Download on the App Store"
+                className="h-14 w-auto"
+              />
             </a>
             <a
               href="#"
-              className="inline-flex items-center justify-center rounded-xl bg-white/70 px-5 py-3 font-medium shadow-glass ring-1 ring-black/5 backdrop-blur-md transition hover:translate-y-[-1px] hover:shadow-soft dark:bg-white/10 dark:ring-white/10"
+              className="inline-flex items-center justify-center rounded-xl transition hover:translate-y-[-1px] hover:opacity-90"
             >
-              Google Play (add link)
+              <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+                className="h-14 w-auto"
+              />
             </a>
           </div>
 
