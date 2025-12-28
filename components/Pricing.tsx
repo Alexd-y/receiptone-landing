@@ -44,9 +44,10 @@ export default function Pricing() {
       includesAllFrom: "PRO — Week"
     },
     {
-      name: "ELITE",
+      name: "PRO — Year",
       price: "CAD 129.99",
-      period: "/ month / seat, billed annually at $1,560",
+      period: "per year",
+      badge: "Most cost-effective",
       description: "Enjoy our premium features. For businesses who take pre-accounting seriously.",
       keyFeatures: [
         { value: "UNLIMITED", label: "AI Scans / Month" },
@@ -102,7 +103,7 @@ export default function Pricing() {
                 <div className="font-[var(--font-ibm)] text-2xl font-bold">{p.name}</div>
                 {p.badge && <div className="mt-1 text-sm opacity-75">{p.badge}</div>}
               </div>
-              {(p.name === "PRO — Week" || p.name === "PRO — Month") && (
+              {(p.name === "PRO — Week" || p.name === "PRO — Month" || p.name === "PRO — Year") && (
                 <div className="rounded-xl bg-black/5 px-3 py-1 text-xs font-medium dark:bg-white/10">
                   PRO
                 </div>
@@ -133,7 +134,7 @@ export default function Pricing() {
             )}
 
             {/* Plan Includes */}
-            <div className="mt-6 flex-grow">
+            <div className="mt-6">
               {p.includesAllFrom ? (
                 <div className="mb-3 text-sm font-medium opacity-90">
                   All {p.includesAllFrom} Features, Plus:
