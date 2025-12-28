@@ -1,3 +1,5 @@
+"use client";
+
 import { MessageCircle, Phone } from "lucide-react";
 
 export default function TalkToSales() {
@@ -9,22 +11,14 @@ export default function TalkToSales() {
             href="tel:+1234567890"
             className="flex items-center justify-center rounded-lg p-2 transition hover:bg-green-50 dark:hover:bg-green-50/20"
             aria-label="Call sales"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "tel:+1234567890";
-            }}
           >
             <Phone className="h-5 w-5 text-green-600 dark:text-green-500" strokeWidth={2} />
           </a>
           <div className="h-6 w-px bg-green-600 dark:bg-green-500" />
           <a
-            href="mailto:sales@receiptone.com"
+            href="mailto:sales@receiptone.com?subject=Sales Inquiry"
             className="flex items-center justify-center rounded-lg p-2 transition hover:bg-green-50 dark:hover:bg-green-50/20"
             aria-label="Chat with sales"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "mailto:sales@receiptone.com?subject=Sales Inquiry";
-            }}
           >
             <MessageCircle className="h-5 w-5 text-green-600 dark:text-green-500" strokeWidth={2} />
           </a>
