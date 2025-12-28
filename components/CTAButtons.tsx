@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Download, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 type Props = {
   onPrimaryClick?: () => void;
@@ -50,7 +50,7 @@ function LoopArrow() {
 
 export default function CTAButtons({ onPrimaryClick }: Props) {
   return (
-    <div className="relative flex flex-nowrap gap-3 items-center pl-8 lg:pl-0 max-w-full overflow-hidden">
+    <div className="relative flex flex-nowrap gap-3 items-center pl-8 lg:pl-0 overflow-visible">
       {/* Loop Arrow - левее всех кнопок и полей, указывает на кнопку "Get early access", без фона, тонкая с пониженной непрозрачностью */}
       <LoopArrow />
 
@@ -71,26 +71,24 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
         {/* Start free - светлая бежевая кнопка с темным текстом */}
         <a
           href="#pricing"
-          className="relative z-10 inline-flex items-center justify-center gap-2 rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
+          className="relative z-10 inline-flex items-center justify-center rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
         >
           <span>Start free</span>
         </a>
 
-        {/* Book a demo - светлая бежевая кнопка с темным текстом, календарь слева */}
+        {/* Book a demo - светлая бежевая кнопка с темным текстом, без иконки */}
         <a
           href="#lead"
-          className="relative z-10 inline-flex items-center justify-center gap-2 rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
+          className="relative z-10 inline-flex items-center justify-center rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
         >
-          <Calendar size={18} />
           <span>Book a demo</span>
         </a>
 
-        {/* Download app - светлая бежевая кнопка с темным текстом, иконка загрузки слева */}
+        {/* Download app - светлая бежевая кнопка с темным текстом, без иконки */}
         <a
           href="#stores"
-          className="relative z-10 inline-flex items-center justify-center gap-2 rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
+          className="relative z-10 inline-flex items-center justify-center rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
         >
-          <Download size={18} />
           <span>Download app</span>
         </a>
       </div>
