@@ -125,16 +125,9 @@ export default function Sections() {
 
       {/* Stats Marquee */}
       <section className="mx-auto max-w-full overflow-hidden border-y border-black/5 py-6 dark:border-white/10">
-        <div className="relative flex w-full">
-          <div className="flex animate-marquee whitespace-nowrap">
-            <div className="mx-8 flex items-center gap-3">
-              <span className="text-2xl font-bold">500K+</span>
-              <span className="text-sm opacity-75">Receipts scanned</span>
-            </div>
-            <div className="mx-8 flex items-center gap-3">
-              <span className="text-2xl font-bold">50K+</span>
-              <span className="text-sm opacity-75">Active users</span>
-            </div>
+        <div className="relative flex w-full overflow-hidden">
+          <div className="flex animate-marquee whitespace-nowrap will-change-transform">
+            {/* First set */}
             <div className="mx-8 flex items-center gap-3">
               <span className="text-2xl font-bold">4.8★</span>
               <span className="text-sm opacity-75">Average rating</span>
@@ -147,7 +140,6 @@ export default function Sections() {
               <span className="text-2xl font-bold">100K+</span>
               <span className="text-sm opacity-75">Reports generated</span>
             </div>
-            {/* Duplicate for seamless loop */}
             <div className="mx-8 flex items-center gap-3">
               <span className="text-2xl font-bold">500K+</span>
               <span className="text-sm opacity-75">Receipts scanned</span>
@@ -156,6 +148,7 @@ export default function Sections() {
               <span className="text-2xl font-bold">50K+</span>
               <span className="text-sm opacity-75">Active users</span>
             </div>
+            {/* Duplicate set for seamless loop */}
             <div className="mx-8 flex items-center gap-3">
               <span className="text-2xl font-bold">4.8★</span>
               <span className="text-sm opacity-75">Average rating</span>
@@ -167,6 +160,14 @@ export default function Sections() {
             <div className="mx-8 flex items-center gap-3">
               <span className="text-2xl font-bold">100K+</span>
               <span className="text-sm opacity-75">Reports generated</span>
+            </div>
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">500K+</span>
+              <span className="text-sm opacity-75">Receipts scanned</span>
+            </div>
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">50K+</span>
+              <span className="text-sm opacity-75">Active users</span>
             </div>
           </div>
         </div>
