@@ -8,13 +8,8 @@ type Props = {
   onPrimaryClick?: () => void;
 };
 
-// Компонент стрелки с петлей (по спецификации iOS: размеры 263.32x70.35, цвет RGB(0.494, 0.533, 0.565), alpha 0.5, stroke width 2)
+// Компонент стрелки с петлей (точный SVG путь из дизайна)
 function LoopArrow() {
-  // Цвет из iOS кода: UIColor(red: 0.494, green: 0.533, blue: 0.565, alpha: 1)
-  const arrowColor = "rgb(126, 136, 144)"; // RGB(0.494*255, 0.533*255, 0.565*255)
-  const arrowAlpha = 0.5;
-  const strokeWidth = 2;
-  
   return (
     <motion.div
       className="absolute -left-24 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none z-0"
@@ -23,39 +18,25 @@ function LoopArrow() {
       transition={{ delay: 0.8, duration: 0.6 }}
     >
       <svg
-        width="180"
-        height="60"
-        viewBox="0 0 180 60"
+        width="214"
+        height="170"
+        viewBox="0 0 214 170"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
         className="opacity-50"
       >
-        {/* Основная кривая стрелки - единый путь с элегантной петлей как курсивная 'e' или спираль */}
-        {/* Начинается сверху слева, образует петлю в верхней части, идет вниз вправо к кнопке "Get early access" */}
         <motion.path
-          d="M 5 5 Q 12 12, 20 18 Q 25 22, 30 25 Q 32 27, 30 29 Q 28 31, 26 29 Q 24 27, 26 25 Q 28 23, 35 26 Q 45 30, 60 35 Q 80 42, 105 48 Q 130 53, 155 55 Q 170 56, 175 55"
-          stroke={arrowColor}
-          strokeWidth={strokeWidth}
-          fill="none"
+          d="M1.00086 1.0002C5 47.5 90.9121 76.0476 125.491 67.7791C130.884 66.4897 143.009 61.3843 138.817 53.2959C135.138 46.1976 122.209 39.6256 115.289 40.8747C97.278 44.126 76.2063 54.1059 90.1515 77.0838C105.333 102.098 136.601 124.212 161.168 139.266C173.085 146.568 187.88 154.495 200.975 158.366C209.667 160.937 203.071 156.485 198.794 152.327C192.711 146.413 178.665 132.758 192.132 145.85C197.605 151.17 204.311 156.241 210.401 159.8C216.911 163.605 203.761 161.216 202.01 161.442C196.491 162.154 188.757 164.463 185.007 168.321"
+          stroke="#7E8890"
+          strokeWidth="2"
           strokeLinecap="round"
-          strokeLinejoin="round"
+          fill="none"
           initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 1 }}
+          animate={{ pathLength: 1, opacity: 0.5 }}
           transition={{
             duration: 2.5,
             delay: 1.2,
             ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 4
-          }}
-        />
-        {/* Стрелка на конце - указывает на центр кнопки "Get early access" */}
-        <motion.polygon
-          points="170,53 175,55 170,57"
-          fill={arrowColor}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 1, 0.7] }}
-          transition={{
-            duration: 1.5,
-            delay: 2.5,
             repeat: Infinity,
             repeatDelay: 4
           }}
