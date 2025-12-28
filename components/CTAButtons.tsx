@@ -17,22 +17,21 @@ function LoopArrow() {
   
   return (
     <motion.div
-      className="absolute -left-20 top-0 bottom-0 hidden lg:flex items-center pointer-events-none z-0"
+      className="absolute -left-24 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none z-0"
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.8, duration: 0.6 }}
-      style={{ opacity: arrowAlpha }}
     >
       <svg
-        width="263.32"
-        height="70.35"
-        viewBox="0 0 263.32 70.35"
-        style={{ opacity: arrowAlpha }}
+        width="180"
+        height="60"
+        viewBox="0 0 180 60"
+        className="opacity-50"
       >
         {/* Основная кривая стрелки - единый путь с элегантной петлей как курсивная 'e' или спираль */}
-        {/* Начинается сверху слева, образует петлю в верхней части, идет вниз вправо */}
+        {/* Начинается сверху слева, образует петлю в верхней части, идет вниз вправо к кнопке "Get early access" */}
         <motion.path
-          d="M 8 8 Q 15 15, 25 20 Q 30 22, 35 24 Q 38 26, 36 28 Q 34 30, 32 28 Q 30 26, 32 24 Q 34 22, 40 25 Q 50 30, 65 38 Q 85 48, 110 55 Q 135 62, 160 65 Q 185 68, 210 65 Q 235 62, 250 58 L 255 56"
+          d="M 5 5 Q 12 12, 20 18 Q 25 22, 30 25 Q 32 27, 30 29 Q 28 31, 26 29 Q 24 27, 26 25 Q 28 23, 35 26 Q 45 30, 60 35 Q 80 42, 105 48 Q 130 53, 155 55 Q 170 56, 175 55"
           stroke={arrowColor}
           strokeWidth={strokeWidth}
           fill="none"
@@ -48,9 +47,9 @@ function LoopArrow() {
             repeatDelay: 4
           }}
         />
-        {/* Стрелка на конце - указывает в правый нижний угол */}
+        {/* Стрелка на конце - указывает на центр кнопки "Get early access" */}
         <motion.polygon
-          points="248,54 255,56 250,60"
+          points="170,53 175,55 170,57"
           fill={arrowColor}
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1, 0.7] }}
@@ -70,8 +69,8 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
   const [isPressed, setIsPressed] = useState(false);
 
   return (
-    <div className="relative flex flex-col gap-3 sm:flex-row sm:items-center">
-      {/* Loop Arrow - слева, указывает на кнопку */}
+    <div className="relative flex flex-col gap-3 sm:flex-row sm:items-center pl-8 lg:pl-28 overflow-visible">
+      {/* Loop Arrow - слева, указывает на кнопку "Get early access" */}
       <LoopArrow />
 
       {/* Primary Button - Get early access */}
@@ -81,7 +80,7 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
         onMouseDown={() => setIsPressed(true)}
         onMouseUp={() => setIsPressed(false)}
         onMouseLeave={() => setIsPressed(false)}
-        className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl bg-accent-primary px-6 py-4 font-medium text-white shadow-lg transition-all duration-300 hover:shadow-xl"
+        className="group relative z-10 inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl bg-accent-primary px-6 py-4 font-medium text-white shadow-lg transition-all duration-300 hover:shadow-xl"
         whileHover={{ scale: 1.02, y: -2 }}
         whileTap={{ scale: 0.98, y: 0 }}
         initial={{ opacity: 0, y: 20 }}
