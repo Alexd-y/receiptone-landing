@@ -9,10 +9,11 @@ type Props = {
 
 // Компонент стрелки с петлей в виде буквы 'e' (точный SVG путь из дизайна, указывает на кнопку "Get early access")
 // Стрелка без фона, сливается с фоном страницы, тонкая и с пониженной непрозрачностью
+// Позиционируется левее всех кнопок и полей
 function LoopArrow() {
   return (
     <motion.div
-      className="absolute -left-20 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none z-0"
+      className="absolute -left-32 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none z-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 0.6 }}
       transition={{ delay: 0.5, duration: 0.5 }}
@@ -49,8 +50,8 @@ function LoopArrow() {
 
 export default function CTAButtons({ onPrimaryClick }: Props) {
   return (
-    <div className="relative flex flex-nowrap gap-3 items-center pl-8 lg:pl-20 overflow-visible">
-      {/* Loop Arrow - слева, указывает на кнопку "Get early access", без фона, тонкая с пониженной непрозрачностью */}
+    <div className="relative flex flex-wrap gap-3 items-center pl-8 lg:pl-0 max-w-full overflow-hidden">
+      {/* Loop Arrow - левее всех кнопок и полей, указывает на кнопку "Get early access", без фона, тонкая с пониженной непрозрачностью */}
       <LoopArrow />
 
       {/* Primary Button - Get early access (черная кнопка с белым текстом) */}
@@ -68,8 +69,8 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
         <ArrowRight size={18} />
       </button>
 
-      {/* Secondary Buttons - светлые бежевые кнопки в один ряд */}
-      <div className="flex flex-nowrap gap-3">
+      {/* Secondary Buttons - светлые бежевые кнопки */}
+      <div className="flex flex-wrap gap-3">
         {/* Start free - светлая бежевая кнопка с темным текстом, стрелка справа */}
         <a
           href="#pricing"
