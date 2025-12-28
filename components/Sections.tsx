@@ -79,9 +79,10 @@ export default function Sections() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="inline-flex items-center gap-2 rounded-2xl liquid-glass-badge px-4 py-2.5 text-xs font-medium"
+                className="inline-flex items-center gap-2 rounded-full liquid-glass-badge px-5 py-2.5 text-xs font-bold border-2 border-accent-secondary/30"
               >
-                Built for US/Canada self-employed & small business
+                <span className="text-lg">🇺🇸🇨🇦</span>
+                <span>Built for US & Canada • IRS & CRA Compliant</span>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -94,36 +95,78 @@ export default function Sections() {
               </motion.div>
             </div>
 
-            <h1 className="mt-6 font-[var(--font-ibm)] text-5xl font-bold leading-[1.1] tracking-tight sm:text-6xl">
-              Stop Losing Money on Tax Deductions.
+            <h1 className="mt-6 font-[var(--font-ibm)] text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+              The IRS & CRA Want Your Money.
               <br />
-              <span className="bg-gradient-to-r from-accent-secondary to-accent-secondary/70 bg-clip-text text-transparent">
-                Get Every Dollar Back.
+              <span className="bg-gradient-to-r from-accent-secondary via-accent-secondary/90 to-accent-secondary bg-clip-text text-transparent">
+                We Help You Keep It.
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-relaxed opacity-90 font-medium">
-              <span className="text-accent-secondary font-bold">$500M+</span> in deductions found. 
-              AI-powered receipt tracking that turns chaos into cash. 
+            <p className="mt-6 max-w-xl text-xl leading-relaxed opacity-95 font-semibold">
+              <span className="text-3xl font-extrabold text-accent-secondary">$500M+</span> in deductions recovered. 
               <br />
-              <span className="text-sm opacity-75 mt-2 block">Join 50,000+ smart business owners saving hours and maximizing refunds.</span>
+              <span className="text-lg font-medium opacity-90">AI-powered magic that finds every deduction you're missing.</span>
+              <br />
+              <span className="text-base opacity-80 mt-3 block font-normal">
+                🇺🇸 🇨🇦 Trusted by <span className="font-bold text-accent-secondary">50,000+</span> US & Canadian business owners saving an average of <span className="font-bold text-accent-secondary">$3,200+</span> per year.
+              </span>
             </p>
 
             {/* Trust badges */}
-            <div className="mt-8 flex flex-wrap items-center gap-4 text-sm">
-              <div className="flex items-center gap-2">
+            <div className="mt-8 flex flex-wrap items-center gap-6 text-sm">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 }}
+                className="flex items-center gap-3 rounded-2xl liquid-glass px-4 py-2.5"
+              >
                 <div className="flex -space-x-2">
-                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-accent-secondary to-accent-secondary/60 border-2 border-white dark:border-ink-900"></div>
-                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-400 border-2 border-white dark:border-ink-900"></div>
-                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-purple-500 to-purple-400 border-2 border-white dark:border-ink-900"></div>
+                  <motion.div
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                    className="h-10 w-10 rounded-full bg-gradient-to-br from-accent-secondary to-accent-secondary/60 border-3 border-white dark:border-ink-900 shadow-lg"
+                  ></motion.div>
+                  <motion.div
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
+                    className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-400 border-3 border-white dark:border-ink-900 shadow-lg"
+                  ></motion.div>
+                  <motion.div
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
+                    className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-400 border-3 border-white dark:border-ink-900 shadow-lg"
+                  ></motion.div>
                 </div>
-                <span className="font-semibold">50K+ Active Users</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-2xl">⭐</span>
-                <span className="font-bold">4.8/5</span>
-                <span className="opacity-75">from 2,400+ reviews</span>
-              </div>
+                <div>
+                  <div className="font-bold text-base">50K+ Active Users</div>
+                  <div className="text-xs opacity-75">US & Canada</div>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4 }}
+                className="flex items-center gap-2 rounded-2xl liquid-glass px-4 py-2.5"
+              >
+                <span className="text-3xl animate-pulse">⭐</span>
+                <div>
+                  <div className="font-bold text-lg">4.8/5</div>
+                  <div className="text-xs opacity-75">2,400+ reviews</div>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5 }}
+                className="flex items-center gap-2 rounded-2xl liquid-glass px-4 py-2.5"
+              >
+                <span className="text-2xl">💰</span>
+                <div>
+                  <div className="font-bold text-lg">$500M+</div>
+                  <div className="text-xs opacity-75">Found in deductions</div>
+                </div>
+              </motion.div>
             </div>
 
             <div className="relative mt-6 overflow-visible">
@@ -135,16 +178,25 @@ export default function Sections() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 px-4 py-2 text-sm font-semibold"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-red-500 via-orange-500 to-red-500 px-6 py-3 text-sm font-bold text-white shadow-2xl"
             >
               <motion.span
-                animate={{ scale: [1, 1.2, 1] }}
+                animate={{ scale: [1, 1.3, 1], rotate: [0, 180, 360] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="h-2 w-2 rounded-full bg-red-500"
-              />
-              <span className="text-red-600 dark:text-red-400">
-                🔥 Limited Time: Get 60-Day Money-Back Guarantee
+                className="text-2xl"
+              >
+                🔥
+              </motion.span>
+              <span className="text-base">
+                Tax Season Special: 60-Day Money-Back Guarantee + Free Setup Call
               </span>
+              <motion.span
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="text-xl"
+              >
+                →
+              </motion.span>
             </motion.div>
 
             <motion.div
@@ -290,12 +342,16 @@ export default function Sections() {
               <Sparkles size={12} className="text-accent-secondary" />
               <span>Benefits</span>
             </div>
-            <h2 className="mt-2 font-[var(--font-ibm)] text-4xl font-bold tracking-tight">
-              Turn Receipt Chaos Into <span className="bg-gradient-to-r from-accent-secondary to-accent-secondary/70 bg-clip-text text-transparent">Tax Gold</span>
+            <h2 className="mt-2 font-[var(--font-ibm)] text-5xl font-extrabold tracking-tight">
+              Turn Receipt Chaos Into <span className="sexy-gradient">Tax Gold</span>
             </h2>
-            <p className="mt-4 max-w-2xl text-lg leading-relaxed opacity-90 font-medium">
+            <p className="mt-4 max-w-2xl text-xl leading-relaxed opacity-95 font-semibold">
               Stop losing money on missed deductions. Our AI finds every dollar you're entitled to — 
-              <span className="font-bold text-accent-secondary"> automatically, accurately, instantly.</span>
+              <span className="font-extrabold text-accent-secondary text-2xl"> automatically, accurately, instantly.</span>
+              <br />
+              <span className="text-base opacity-80 mt-2 block font-normal">
+                🇺🇸 IRS compliant • 🇨🇦 CRA compliant • Works in all 50 states & 13 provinces
+              </span>
             </p>
           </div>
           <a
