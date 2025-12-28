@@ -455,6 +455,330 @@ export default function Sections() {
         </div>
       </section>
 
+      {/* Receipt Tracking Made Magical */}
+      <section className="mx-auto max-w-6xl px-6 py-14">
+        <div className="text-center mb-12">
+          <h2 className="font-[var(--font-ibm)] text-4xl font-bold">
+            Receipt tracking made magical
+          </h2>
+          <p className="mt-3 text-sm opacity-80">
+            ReceiptOne has already found over $500 million in tax deductions and reimbursements.
+          </p>
+        </div>
+
+        {/* Stay compliant & audit-ready */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center mt-12">
+          <div>
+            <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
+              Stay compliant & audit-ready
+            </div>
+            <h3 className="font-[var(--font-ibm)] text-3xl font-semibold mb-4">
+              Turn your receipts into tax savings
+            </h3>
+            <ul className="space-y-3 text-sm opacity-80">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>AI automatically labels the tax category, vendor, total tax, date and payment method</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Smart capture automatically crops receipts</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Protect your data with automatic cloud backups</span>
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
+            <div className="text-sm font-medium opacity-80 mb-4">Receipt Capture</div>
+            <div className="rounded-lg bg-white/60 p-4 dark:bg-white/5">
+              <div className="text-xs opacity-60 mb-2">Rigoberto's</div>
+              <div className="text-2xl font-bold mb-1">$26.54</div>
+              <div className="text-xs opacity-75 mb-3">Business Meals</div>
+              <div className="flex items-center gap-2 rounded-lg bg-green-500/20 px-3 py-2">
+                <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-xs font-medium text-green-600 dark:text-green-400">Receipt Saved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Organize your digital receipts */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center mt-12">
+          <div className="order-2 lg:order-1">
+            <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
+              <div className="text-sm font-medium opacity-80 mb-4">Organized Receipts</div>
+              <div className="space-y-3">
+                <div className="rounded-lg bg-white/60 p-3 dark:bg-white/5">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <div className="rounded-full bg-black p-1.5">
+                        <span className="text-white text-xs font-bold">a</span>
+                      </div>
+                      <span className="font-semibold text-sm">Amazon</span>
+                    </div>
+                    <span className="text-xs text-green-600 dark:text-green-400">Tax Write-Off</span>
+                  </div>
+                  <div className="text-xs opacity-60 mb-1">Office Supplies</div>
+                  <div className="font-bold">$182.28</div>
+                </div>
+                <div className="rounded-lg bg-white/60 p-3 dark:bg-white/5">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <div className="rounded-full bg-red-500 p-1.5">
+                        <span className="text-white text-xs">Δ</span>
+                      </div>
+                      <span className="font-semibold text-sm">Delta</span>
+                    </div>
+                  </div>
+                  <div className="text-xs opacity-60 mb-1">Business Travel</div>
+                  <div className="font-bold">$921.17</div>
+                </div>
+                <div className="rounded-lg bg-white/60 p-3 dark:bg-white/5">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <div className="rounded-full bg-blue-500 p-1.5">
+                        <span className="text-white text-xs font-bold">G</span>
+                      </div>
+                      <span className="font-semibold text-sm">Geico</span>
+                    </div>
+                    <span className="text-xs text-green-600 dark:text-green-400">Tax Write-Off</span>
+                  </div>
+                  <div className="text-xs opacity-60 mb-1">Insurance</div>
+                  <div className="font-bold">$217.28</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2">
+            <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
+              Organize your digital receipts
+            </div>
+            <h3 className="font-[var(--font-ibm)] text-3xl font-semibold mb-4">
+              Automatically import email receipts
+            </h3>
+            <ul className="space-y-3 text-sm opacity-80">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Connect your Gmail account to auto scan for receipts</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Forward receipts to upload@receiptone.com to automatically add them to your account</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Automatic Mileage Tracker & Deductions */}
+      <section className="mx-auto max-w-6xl px-6 py-14">
+        {/* Automatic mileage tracker */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
+              Automatic mileage tracker
+            </div>
+            <h3 className="font-[var(--font-ibm)] text-3xl font-semibold mb-4">
+              Write off $0.67 per mile you drive
+            </h3>
+            <ul className="space-y-3 text-sm opacity-80">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Automatically track drives with GPS</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Save and classify trips in seconds</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Set custom mileage deduction rates</span>
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
+            <div className="text-sm font-medium opacity-80 mb-4">Mileage Tracking</div>
+            <div className="rounded-lg bg-gray-100 h-32 mb-4 flex items-center justify-center dark:bg-gray-800">
+              <span className="text-xs opacity-60">Map View</span>
+            </div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-sm">
+                <div className="rounded-full bg-orange-500 p-1.5">
+                  <span className="text-white text-xs">🏗</span>
+                </div>
+                <span className="font-semibold">Work Site #2</span>
+                <span className="text-xs opacity-60 ml-auto">8:51 AM</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <div className="rounded-full bg-orange-500 p-1.5">
+                  <span className="text-white text-xs">🏠</span>
+                </div>
+                <span className="font-semibold">Home Depot</span>
+                <span className="text-xs opacity-60 ml-auto">9:05 PM</span>
+              </div>
+            </div>
+            <div className="mt-4 pt-4 border-t border-black/5 dark:border-white/10">
+              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">$7.49</div>
+              <div className="text-sm opacity-75">12.3 Miles</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Connect accounts and find deductions */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center mt-12">
+          <div className="order-2 lg:order-1">
+            <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
+              <div className="text-sm font-medium opacity-80 mb-4">Tax Deductions</div>
+              <div className="space-y-3">
+                <div className="rounded-lg bg-blue-500/10 p-3 border border-blue-500/20">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <div className="rounded-full bg-black p-1.5">
+                        <span className="text-white text-xs font-bold">a</span>
+                      </div>
+                      <span className="font-semibold text-sm text-white">Amazon</span>
+                    </div>
+                    <span className="text-xs text-green-400">Tax Write-Off</span>
+                  </div>
+                  <div className="text-xs opacity-80 mb-1">Office Supplies</div>
+                  <div className="font-bold text-white">$182.28</div>
+                </div>
+                <div className="rounded-lg bg-blue-500/10 p-3 border border-blue-500/20">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <div className="rounded-full bg-red-500 p-1.5">
+                        <span className="text-white text-xs">Δ</span>
+                      </div>
+                      <span className="font-semibold text-sm text-white">Delta</span>
+                    </div>
+                    <span className="text-xs text-green-400">Tax Write-Off</span>
+                  </div>
+                  <div className="text-xs opacity-80 mb-1">Business Travel</div>
+                  <div className="font-bold text-white">$921.17</div>
+                </div>
+                <div className="rounded-lg bg-blue-500/10 p-3 border border-blue-500/20">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <div className="rounded-full bg-blue-500 p-1.5">
+                        <span className="text-white text-xs font-bold">G</span>
+                      </div>
+                      <span className="font-semibold text-sm text-white">Geico</span>
+                    </div>
+                    <span className="text-xs text-green-400">Tax Write-Off</span>
+                  </div>
+                  <div className="text-xs opacity-80 mb-1">Insurance</div>
+                  <div className="font-bold text-white">$217.28</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2">
+            <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
+              Never miss a deduction
+            </div>
+            <h3 className="font-[var(--font-ibm)] text-3xl font-semibold mb-4">
+              Connect your accounts and find deductions
+            </h3>
+            <ul className="space-y-3 text-sm opacity-80">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Link your bank accounts, credit cards, or emails</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>AI scans transactions and classifies tax deductions</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Save an average of $2,192 per year on taxes</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional PDF and Excel reports */}
+      <section className="mx-auto max-w-6xl px-6 py-14">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
+              Professional PDF and Excel reports
+            </div>
+            <h3 className="font-[var(--font-ibm)] text-3xl font-semibold mb-4">
+              Download reports at the tap of a button
+            </h3>
+            <ul className="space-y-3 text-sm opacity-80">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Summary reports that make filing taxes easy</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Create PDF expense reports for reimbursement</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent-primary"></span>
+                <span>Export your data to CSV or Excel</span>
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
+            <div className="text-sm font-medium opacity-80 mb-4">2024 Summary</div>
+            <div className="flex items-center justify-center h-32 mb-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+              <div className="text-center">
+                <div className="text-xs opacity-60 mb-2">Pie Chart</div>
+                <div className="flex gap-2">
+                  <div className="w-16 h-16 rounded-full bg-red-500"></div>
+                  <div className="w-16 h-16 rounded-full bg-blue-500"></div>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center gap-2 text-sm">
+                <div className="w-4 h-4 rounded bg-red-500"></div>
+                <span className="opacity-80">Supplies and Materials</span>
+                <span className="ml-auto font-semibold">$15,729</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <div className="w-4 h-4 rounded bg-red-500"></div>
+                <span className="opacity-80">Business Travel</span>
+                <span className="ml-auto font-semibold">$2,540</span>
+              </div>
+            </div>
+            <div className="text-sm font-medium opacity-80 mb-2">Top Vendors</div>
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center gap-2 text-sm">
+                <div className="w-6 h-6 rounded bg-orange-500"></div>
+                <span className="opacity-80">Home Depot</span>
+                <span className="ml-auto font-semibold">$7,529</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <div className="w-6 h-6 rounded bg-red-500"></div>
+                <span className="opacity-80">Delta Airlines</span>
+              </div>
+            </div>
+            <div className="flex gap-3 pt-4 border-t border-black/5 dark:border-white/10">
+              <button className="flex-1 flex flex-col items-center gap-2 rounded-lg bg-green-500/20 p-3 hover:bg-green-500/30 transition">
+                <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span className="text-xs font-medium text-green-600 dark:text-green-400">Excel (CSV)</span>
+              </button>
+              <button className="flex-1 flex flex-col items-center gap-2 rounded-lg bg-blue-500/20 p-3 hover:bg-blue-500/30 transition">
+                <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span className="text-xs font-medium text-blue-600 dark:text-blue-400">Report (PDF)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Pricing />
 
       {/* FAQ */}
