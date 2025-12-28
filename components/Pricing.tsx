@@ -45,8 +45,8 @@ export default function Pricing() {
     },
     {
       name: "PRO — Year",
-      price: "CAD 129.99",
-      period: "per year",
+      price: "CAD 10,83",
+      period: "/ month / seat, billed annually at CAD 129,99",
       badge: "Most cost-effective",
       description: "Enjoy our premium features. For businesses who take pre-accounting seriously.",
       keyFeatures: [
