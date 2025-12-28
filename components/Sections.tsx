@@ -87,13 +87,13 @@ export default function Sections() {
             </div>
 
             <div className="mt-6 rounded-xl2 bg-white/60 p-5 text-sm shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-              <div className="font-[var(--font-ibm)] font-semibold">What you get in MVP Web</div>
+              <div className="font-[var(--font-ibm)] font-semibold">What you get with ReceiptOne Web</div>
               <ul className="mt-2 list-disc pl-5 opacity-85">
-                <li>Bulk upload + fast review</li>
-                <li>Analytics & exports</li>
-                <li>Mileage / trips tracking</li>
-                <li>Reports & documentation workflows</li>
-                <li>Referral-ready ecosystem</li>
+                <li>Bulk receipt upload and quick review</li>
+                <li>Expense analytics and data exports</li>
+                <li>Mileage and trip tracking</li>
+                <li>Tax-ready reports and documents</li>
+                <li>Built-in referral system</li>
               </ul>
             </div>
           </div>
