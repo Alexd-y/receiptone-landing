@@ -6,7 +6,7 @@ Production-ready landing page for ReceiptOne — web workspace for self-employed
 
 ### Prerequisites
 - Node.js 18+ and npm/pnpm
-- PostgreSQL database (for lead storage) OR Firebase project
+- Firebase project (Firestore) — используется та же база данных, что и мобильное приложение
 - Vercel account (recommended) or Netlify
 
 ### Local Development
@@ -20,37 +20,61 @@ Production-ready landing page for ReceiptOne — web workspace for self-employed
    ```bash
    cp .env.example .env
    ```
-   Edit `.env` and fill in your values (see `.env.example` for details).
+   Edit `.env` and fill in your Firebase credentials (see `.env.example` for details).
 
-3. **Set up database (if using Postgres):**
-   ```bash
-   # Generate Prisma client
-   npm run prisma:generate
-   
-   # Run migrations (if needed)
-   npm run prisma:migrate
-   ```
-
-4. **Start development server:**
+3. **Start development server:**
    ```bash
    npm run dev
    ```
    Open [http://localhost:3000](http://localhost:3000)
 
-## 📦 Lead Storage Options
+## 🔥 Firebase Setup
 
-### Option 1: PostgreSQL (default)
-- Set `LEAD_STORAGE=postgres` in `.env`
-- Provide `DATABASE_URL` (PostgreSQL connection string)
-- Run `npm run prisma:generate` after schema changes
+ReceiptOne использует Firebase Firestore как основную базу данных. Лендинг сохраняет лиды в коллекцию `leads` той же базы данных, что и мобильное приложение.
 
-### Option 2: Firebase Firestore
-- Set `LEAD_STORAGE=firebase` in `.env`
-- Provide Firebase credentials:
-  - `FIREBASE_PROJECT_ID`
-  - `FIREBASE_CLIENT_EMAIL`
-  - `FIREBASE_PRIVATE_KEY`
-- Install Firebase Admin: `npm i firebase-admin`
+### Получение Firebase Credentials
+
+1. **Откройте Firebase Console:** [console.firebase.google.com](https://console.firebase.google.com)
+2. **Выберите проект ReceiptOne** (или создайте новый)
+3. **Перейдите в Project Settings → Service Accounts**
+4. **Нажмите "Generate new private key"**
+5. **Скачайте JSON файл** с учетными данными
+
+### Настройка переменных окружения
+
+Добавьте в `.env`:
+
+```env
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_CLIENT_EMAIL=firebase-adminsdk-xxxx@your-project.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+```
+
+**Важно:** 
+- `FIREBASE_PRIVATE_KEY` должен быть в кавычках и содержать `\n` для переносов строк
+- Или используйте одну строку без переносов — код автоматически заменит `\\n` на реальные переносы
+
+### Структура базы данных
+
+Лендинг сохраняет лиды в коллекцию `leads` со следующей структурой:
+
+```typescript
+{
+  email: string;
+  name?: string;
+  persona?: string;
+  consentMarketing: boolean;
+  consentAnalytics: boolean;
+  source?: string; // "landing" по умолчанию
+  userAgent?: string;
+  ipHash?: string; // SHA-256 хеш IP адреса
+  country?: string;
+  message?: string;
+  createdAt: string; // ISO timestamp
+}
+```
+
+Полная документация по структуре базы данных ReceiptOne находится в `receiptone-db-docs/`.
 
 ## 🌐 Deployment
 
@@ -58,11 +82,9 @@ Production-ready landing page for ReceiptOne — web workspace for self-employed
 
 1. **Push code to GitHub:**
    ```bash
-   git init
    git add .
-   git commit -m "Initial commit"
-   git remote add origin <your-repo-url>
-   git push -u origin main
+   git commit -m "Update to Firebase"
+   git push origin main
    ```
 
 2. **Import project in Vercel:**
@@ -77,9 +99,10 @@ Production-ready landing page for ReceiptOne — web workspace for self-employed
      - `NEXT_PUBLIC_CANONICAL_URL`
      - `NEXT_PUBLIC_COMPANY_NAME`
      - `NEXT_PUBLIC_APP_NAME`
-     - `LEAD_STORAGE`
-     - `DATABASE_URL` (if using Postgres)
-     - `FIREBASE_*` (if using Firebase)
+     - `FIREBASE_PROJECT_ID`
+     - `FIREBASE_CLIENT_EMAIL`
+     - `FIREBASE_PRIVATE_KEY`
+     - `NEXT_PUBLIC_ENABLE_ANALYTICS_CONSENT`
      - `NODE_ENV=production`
 
 4. **Deploy:**
@@ -102,7 +125,7 @@ Production-ready landing page for ReceiptOne — web workspace for self-employed
 
 3. **Build settings:**
    - Build command: `npm run build`
-   - Publish directory: `.next` (or configure for static export if needed)
+   - Publish directory: `.next`
 
 4. **Environment variables:**
    - Site settings → Environment variables
@@ -110,28 +133,6 @@ Production-ready landing page for ReceiptOne — web workspace for self-employed
 
 5. **Deploy:**
    - Netlify will build and deploy automatically
-
-### GitHub Pages (Static Export Only)
-
-⚠️ **Note:** GitHub Pages only supports static sites. API routes (`/api/leads`) won't work. Use external form service (Formspree, Google Apps Script) instead.
-
-1. **Configure static export in `next.config.js`:**
-   ```js
-   const nextConfig = {
-     output: 'export',
-     basePath: '/your-repo-name', // if deploying to /repo subpath
-     // ... rest of config
-   };
-   ```
-
-2. **Build:**
-   ```bash
-   npm run build
-   ```
-
-3. **Deploy:**
-   - Push `out/` directory to `gh-pages` branch
-   - Enable Pages in repository settings
 
 ## 🔒 Security Features
 
@@ -151,10 +152,12 @@ This landing page includes:
 See `.env.example` for complete list. Required variables:
 
 - `NEXT_PUBLIC_CANONICAL_URL` - Your website URL (for SEO)
-- `LEAD_STORAGE` - "postgres" or "firebase"
-- `DATABASE_URL` - PostgreSQL connection string (if using Postgres)
+- `FIREBASE_PROJECT_ID` - Firebase project ID
+- `FIREBASE_CLIENT_EMAIL` - Firebase service account email
+- `FIREBASE_PRIVATE_KEY` - Firebase service account private key
 - `NEXT_PUBLIC_COMPANY_NAME` - Company name
 - `NEXT_PUBLIC_APP_NAME` - App name
+- `NEXT_PUBLIC_ENABLE_ANALYTICS_CONSENT` - Enable cookie banner ("true" or "false")
 
 ## 🛠️ Available Scripts
 
@@ -162,9 +165,6 @@ See `.env.example` for complete list. Required variables:
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
-- `npm run prisma:generate` - Generate Prisma client
-- `npm run prisma:migrate` - Run database migrations
-- `npm run prisma:studio` - Open Prisma Studio (database GUI)
 
 ## 📁 Project Structure
 
@@ -173,23 +173,26 @@ receiptone-landing/
 ├── app/                    # Next.js App Router
 │   ├── api/leads/         # Lead form API endpoint
 │   ├── privacy/           # Privacy Policy page
-│   ├── terms/              # Terms of Service page
-│   ├── layout.tsx          # Root layout with metadata
-│   ├── page.tsx            # Homepage
-│   ├── robots.ts           # robots.txt generator
-│   └── sitemap.ts          # sitemap.xml generator
-├── components/             # React components
-│   ├── CookieBanner.tsx   # Cookie consent banner
-│   ├── LeadForm.tsx        # Lead capture form
-│   └── ...                 # Other components
-├── lib/                    # Utilities
-│   ├── env.ts              # Environment helpers
-│   ├── validators.ts       # Zod schemas
-│   ├── rateLimit.ts        # Rate limiting
-│   └── leadStore.ts        # Lead storage abstraction
-├── prisma/                 # Database schema
-│   └── schema.prisma       # Prisma schema
-└── public/                 # Static assets
+│   ├── terms/            # Terms of Service page
+│   ├── signin/           # Sign in page
+│   ├── signup/           # Sign up page
+│   ├── layout.tsx        # Root layout with metadata
+│   ├── page.tsx          # Homepage
+│   ├── robots.ts         # robots.txt generator
+│   └── sitemap.ts        # sitemap.xml generator
+├── components/           # React components
+│   ├── CookieBanner.tsx  # Cookie consent banner
+│   ├── LeadForm.tsx      # Lead capture form
+│   └── ...               # Other components
+├── lib/                  # Utilities
+│   ├── env.ts            # Environment helpers
+│   ├── validators.ts     # Zod schemas
+│   ├── rateLimit.ts      # Rate limiting
+│   ├── leadStore.ts      # Firebase lead storage
+│   ├── firebaseAdmin.ts  # Firebase Admin SDK setup
+│   └── types/            # TypeScript types
+│       └── firebase.ts   # Firebase Firestore types
+└── public/               # Static assets
 ```
 
 ## 🐛 Troubleshooting
@@ -198,23 +201,26 @@ receiptone-landing/
 - Use `npm install --legacy-peer-deps` or check `.npmrc` file
 
 **Form submissions fail:**
-- Check `DATABASE_URL` or Firebase credentials
-- Verify `LEAD_STORAGE` environment variable
+- Check Firebase credentials (`FIREBASE_PROJECT_ID`, `FIREBASE_CLIENT_EMAIL`, `FIREBASE_PRIVATE_KEY`)
+- Verify Firebase service account has Firestore permissions
 - Check Vercel/Netlify function logs
 
 **CSP blocks analytics:**
 - CSP in `next.config.js` includes common analytics domains
 - Add your specific domains if needed
 
-**Prisma client not found:**
-- Run `npm run prisma:generate` after installing dependencies
+**Firebase connection errors:**
+- Ensure `FIREBASE_PRIVATE_KEY` is properly formatted (with `\n` for line breaks)
+- Check that service account has "Cloud Datastore User" or "Firestore User" role
+- Verify project ID matches your Firebase project
 
 ## 📞 Support
 
 For issues or questions:
 - Check Vercel/Netlify deployment logs
 - Review environment variables configuration
-- Ensure database/Firebase is accessible from deployment platform
+- Ensure Firebase Firestore is accessible from deployment platform
+- Check Firebase Console → Firestore Database → Collection "leads"
 
 ## 📄 License
 

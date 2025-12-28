@@ -44,6 +44,11 @@ next-env.d.ts
 *.swo
 *~
 
-# Prisma
-prisma/migrations/
+# GitHub config (keep in repo, but can be customized locally)
+# .github-config.json
+
+# Firebase (local config files only)
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
 

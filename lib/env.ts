@@ -12,8 +12,7 @@ export function optionalEnv(name: string): string | undefined {
   return v && v.trim() ? v : undefined;
 }
 
-export function leadStorage(): "postgres" | "firebase" {
-  const v = (process.env.LEAD_STORAGE ?? "postgres").toLowerCase();
-  if (v === "firebase") return "firebase";
-  return "postgres";
+export function leadStorage(): "firebase" {
+  // ReceiptOne использует Firebase Firestore как основную БД
+  return "firebase";
 }

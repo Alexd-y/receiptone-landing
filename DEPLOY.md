@@ -12,7 +12,7 @@
    git commit -m "Initial commit: ReceiptOne Landing"
    
    # Создайте репозиторий на GitHub и выполните:
-   git remote add origin https://github.com/YOUR_USERNAME/receiptone-landing.git
+   git remote add origin https://github.com/Alexd-y/receiptone-landing.git
    git push -u origin main
    ```
 
