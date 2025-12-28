@@ -5,7 +5,7 @@ export default function Pricing() {
     {
       name: "PRO — Week",
       price: "CAD 4.99",
-      period: "per week",
+      period: "/ month / seat, billed annually at CAD 239,52",
       badge: "7-day free trial",
       description: "Discover for free what ReceiptOne can do for you. Great for personal use.",
       keyFeatures: [
@@ -157,7 +157,7 @@ export default function Pricing() {
             {/* CTA Button */}
             <a
               href="#lead"
-              className="mt-auto inline-flex w-full items-center justify-center rounded-xl bg-accent-primary px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95"
+              className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-accent-primary px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95"
             >
               START FOR FREE
             </a>
