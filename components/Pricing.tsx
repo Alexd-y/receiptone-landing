@@ -29,30 +29,36 @@ export default function Pricing() {
     {
       name: "PRO — Month",
       price: "CAD 11.99",
-      period: "per month",
+      period: "/ month / seat, billed annually at CAD143,88",
       badge: "Best value for most users",
       description: "Boost productivity with our pro tools for small business owners and entrepreneurs.",
+      keyFeatures: [
+        { value: "200", label: "AI Scans / Month" },
+        { value: "5", label: "Requests / Month" }
+      ],
       planIncludes: [
         "Advanced analytics dashboard",
         "Better filtering & faster review flows",
         "Priority support"
       ],
-      includesAllFrom: "PRO — Week",
-      keyFeatures: null
+      includesAllFrom: "PRO — Week"
     },
     {
       name: "ELITE",
       price: "CAD 129.99",
       period: "/ month / seat, billed annually at $1,560",
       description: "Enjoy our premium features. For businesses who take pre-accounting seriously.",
+      keyFeatures: [
+        { value: "UNLIMITED", label: "AI Scans / Month" },
+        { value: "UNLIMITED", label: "Requests / Month" }
+      ],
       planIncludes: [
         "Long-term audit readiness",
         "Team-friendly workflows (lightweight)",
         "Roadmap access program"
       ],
-      includesAllFrom: "PRO",
-      bestDeal: true,
-      keyFeatures: null
+      includesAllFrom: "PRO — Month",
+      bestDeal: true
     }
   ];
 
