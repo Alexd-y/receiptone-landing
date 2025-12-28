@@ -27,16 +27,17 @@ export default function Pricing() {
       ]
     },
     {
-      name: "PRO",
+      name: "PRO — Month",
       price: "CAD 11.99",
-      period: "/ month / seat, billed annually at $144",
+      period: "per month",
+      badge: "Best value for most users",
       description: "Boost productivity with our pro tools for small business owners and entrepreneurs.",
       planIncludes: [
         "Advanced analytics dashboard",
         "Better filtering & faster review flows",
         "Priority support"
       ],
-      includesAllFrom: "FREE",
+      includesAllFrom: "PRO — Week",
       keyFeatures: null
     },
     {
@@ -79,7 +80,7 @@ export default function Pricing() {
         {plans.map((p) => (
           <div
             key={p.name}
-            className="relative rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10"
+            className="relative flex flex-col rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10"
           >
             {p.bestDeal && (
               <div className="absolute -right-2 -top-2 z-10 rotate-[-3deg]">
@@ -95,7 +96,7 @@ export default function Pricing() {
                 <div className="font-[var(--font-ibm)] text-2xl font-bold">{p.name}</div>
                 {p.badge && <div className="mt-1 text-sm opacity-75">{p.badge}</div>}
               </div>
-              {p.name === "PRO — Week" && (
+              {(p.name === "PRO — Week" || p.name === "PRO — Month") && (
                 <div className="rounded-xl bg-black/5 px-3 py-1 text-xs font-medium dark:bg-white/10">
                   PRO
                 </div>
@@ -126,7 +127,7 @@ export default function Pricing() {
             )}
 
             {/* Plan Includes */}
-            <div className="mt-6">
+            <div className="mt-6 flex-grow">
               {p.includesAllFrom ? (
                 <div className="mb-3 text-sm font-medium opacity-90">
                   All {p.includesAllFrom} Features, Plus:
@@ -149,7 +150,7 @@ export default function Pricing() {
             {/* CTA Button */}
             <a
               href="#lead"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-accent-primary px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95"
+              className="mt-auto inline-flex w-full items-center justify-center rounded-xl bg-accent-primary px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95"
             >
               START FOR FREE
             </a>
