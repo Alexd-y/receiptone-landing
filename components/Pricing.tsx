@@ -34,7 +34,7 @@ export default function Pricing() {
       description: "Boost productivity with our pro tools for small business owners and entrepreneurs.",
       keyFeatures: [
         { value: "200", label: "AI Scans / Month" },
-        { value: "5", label: "Requests / Month" }
+        { value: "10", label: "Requests / Month" }
       ],
       planIncludes: [
         "Advanced analytics dashboard",
@@ -134,7 +134,7 @@ export default function Pricing() {
             )}
 
             {/* Plan Includes */}
-            <div className="mt-6">
+            <div className="mt-6 flex-grow">
               {p.includesAllFrom ? (
                 <div className="mb-3 text-sm font-medium opacity-90">
                   All {p.includesAllFrom} Features, Plus:
@@ -157,7 +157,7 @@ export default function Pricing() {
             {/* CTA Button */}
             <a
               href="#lead"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-accent-primary px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95"
+              className="mt-auto inline-flex w-full items-center justify-center rounded-xl bg-accent-primary px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95"
             >
               START FOR FREE
             </a>
