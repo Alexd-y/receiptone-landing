@@ -58,38 +58,37 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
       <button
         type="button"
         onClick={onPrimaryClick}
-        className="relative z-10 inline-flex items-center justify-center gap-2 rounded-xl bg-accent-primary px-5 py-3 font-medium text-white shadow-md transition-all hover:shadow-lg whitespace-nowrap"
+        className="relative z-10 inline-flex flex-col items-center justify-center gap-1 rounded-xl bg-accent-primary px-4 py-3 font-medium text-white shadow-md transition-all hover:shadow-lg text-center min-w-0"
       >
-        {/* Sparkles icon слева */}
-        <Sparkles size={18} />
-
-        <span>Get early access</span>
+        {/* Sparkles icon сверху */}
+        <Sparkles size={16} />
+        <span className="text-sm leading-tight">Get early<br />access</span>
       </button>
 
       {/* Secondary Buttons - светлые бежевые кнопки в одну строчку */}
-      <div className="flex flex-nowrap gap-3">
+      <div className="flex flex-nowrap gap-2">
         {/* Start free - светлая бежевая кнопка с темным текстом */}
         <a
           href="#pricing"
-          className="relative z-10 inline-flex items-center justify-center rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
+          className="relative z-10 inline-flex flex-col items-center justify-center rounded-xl bg-sand-100 px-4 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 text-center min-w-0"
         >
-          <span>Start free</span>
+          <span className="text-sm leading-tight">Start<br />free</span>
         </a>
 
         {/* Book a demo - светлая бежевая кнопка с темным текстом, без иконки */}
         <a
           href="#lead"
-          className="relative z-10 inline-flex items-center justify-center rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
+          className="relative z-10 inline-flex flex-col items-center justify-center rounded-xl bg-sand-100 px-4 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 text-center min-w-0"
         >
-          <span>Book a demo</span>
+          <span className="text-sm leading-tight">Book a<br />demo</span>
         </a>
 
         {/* Download app - светлая бежевая кнопка с темным текстом, без иконки */}
         <a
           href="#stores"
-          className="relative z-10 inline-flex items-center justify-center rounded-xl bg-sand-100 px-5 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 whitespace-nowrap"
+          className="relative z-10 inline-flex flex-col items-center justify-center rounded-xl bg-sand-100 px-4 py-3 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 text-center min-w-0"
         >
-          <span>Download app</span>
+          <span className="text-sm leading-tight">Download<br />app</span>
         </a>
       </div>
     </div>
