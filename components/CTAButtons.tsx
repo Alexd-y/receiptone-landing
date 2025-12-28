@@ -8,7 +8,7 @@ type Props = {
   onPrimaryClick?: () => void;
 };
 
-// Компонент стрелки с петлей (как на картинке - светлая серая, петля вверху, указывает вниз вправо)
+// Компонент стрелки с петлей (точно как на картинке - элегантная петля как курсивная 'e', тонкая серая)
 function LoopArrow() {
   return (
     <motion.div
@@ -18,16 +18,16 @@ function LoopArrow() {
       transition={{ delay: 0.8, duration: 0.6 }}
     >
       <svg
-        width="120"
-        height="100"
-        viewBox="0 0 120 100"
+        width="140"
+        height="120"
+        viewBox="0 0 140 120"
         className="text-gray-400 dark:text-gray-500"
       >
-        {/* Основная кривая стрелки - начинается сверху слева, петля в верхней части, идет вниз вправо */}
+        {/* Основная кривая стрелки - единый путь с элегантной петлей как курсивная 'e' или спираль */}
         <motion.path
-          d="M 5 5 Q 10 15, 15 25 Q 20 30, 25 28 Q 30 26, 25 30 Q 20 34, 25 40 Q 35 50, 50 60 Q 70 70, 95 80 L 110 85"
+          d="M 8 8 Q 12 18, 18 28 Q 20 32, 24 36 Q 26 38, 24 40 Q 22 42, 20 40 Q 18 38, 20 36 Q 22 34, 26 36 Q 32 40, 40 48 Q 50 58, 62 68 Q 75 78, 92 88 Q 108 95, 120 98 L 128 100"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth="1.5"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -41,30 +41,12 @@ function LoopArrow() {
             repeatDelay: 4
           }}
         />
-        {/* Петля в верхней части (как на картинке) */}
-        <motion.path
-          d="M 15 25 Q 18 20, 22 22 Q 26 24, 25 28 Q 24 32, 20 30"
-          stroke="currentColor"
-          strokeWidth="2"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{
-            duration: 1.5,
-            delay: 1.5,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 4.5
-          }}
-        />
-        {/* Стрелка на конце - указывает в правый нижний угол на кнопку */}
+        {/* Стрелка на конце - тонкая треугольная, указывает в правый нижний угол */}
         <motion.polygon
-          points="105,80 110,85 105,90"
+          points="125,96 130,100 125,104"
           fill="currentColor"
           initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 1, 0.8] }}
+          animate={{ opacity: [0, 1, 0.7] }}
           transition={{
             duration: 1.5,
             delay: 2.5,
