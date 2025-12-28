@@ -1,5 +1,6 @@
 import Brand from "@/components/Brand";
 import ThemeToggle from "@/components/ThemeToggle";
+import TalkToSales from "@/components/TalkToSales";
 
 export default function Header() {
   return (
@@ -37,6 +38,9 @@ export default function Header() {
           >
             Sign up
           </a>
+          <div className="hidden sm:block">
+            <TalkToSales />
+          </div>
           <ThemeToggle />
         </div>
       </div>
