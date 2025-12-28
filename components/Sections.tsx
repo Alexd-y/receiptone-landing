@@ -74,8 +74,7 @@ export default function Sections() {
             </motion.div>
 
             <h1 className="mt-4 font-[var(--font-ibm)] text-4xl font-semibold leading-tight sm:text-5xl">
-              Receipts, mileage & reports —
-              <span className="block opacity-90">a web workspace that complements your mobile app</span>
+              Track receipts, mileage & tax-ready reports
             </h1>
 
             <p className="mt-4 max-w-xl text-sm leading-relaxed opacity-80">
