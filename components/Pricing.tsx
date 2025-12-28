@@ -31,6 +31,7 @@ export default function Pricing() {
       price: "CAD 129.99",
       period: "per year",
       badge: "Most cost-effective",
+      bestDeal: true,
       features: [
         "Everything in Monthly",
         "Long-term audit readiness",
@@ -64,8 +65,15 @@ export default function Pricing() {
         {plans.map((p) => (
           <div
             key={p.name}
-            className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10"
+            className="relative rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10"
           >
+            {p.bestDeal && (
+              <div className="absolute -right-2 -top-2 z-10 rotate-[-3deg]">
+                <div className="rounded-lg bg-green-500 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-white shadow-md">
+                  BEST DEAL
+                </div>
+              </div>
+            )}
             <div className="flex items-start justify-between gap-4">
               <div>
                 <div className="font-[var(--font-ibm)] text-lg font-semibold">{p.name}</div>
