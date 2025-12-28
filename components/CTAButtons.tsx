@@ -8,26 +8,33 @@ type Props = {
   onPrimaryClick?: () => void;
 };
 
-// Компонент стрелки с петлей (точно как на картинке - элегантная петля как курсивная 'e', тонкая серая)
+// Компонент стрелки с петлей (по спецификации iOS: размеры 263.32x70.35, цвет RGB(0.494, 0.533, 0.565), alpha 0.5, stroke width 2)
 function LoopArrow() {
+  // Цвет из iOS кода: UIColor(red: 0.494, green: 0.533, blue: 0.565, alpha: 1)
+  const arrowColor = "rgb(126, 136, 144)"; // RGB(0.494*255, 0.533*255, 0.565*255)
+  const arrowAlpha = 0.5;
+  const strokeWidth = 2;
+  
   return (
     <motion.div
       className="absolute -left-20 top-0 bottom-0 hidden lg:flex items-center pointer-events-none z-0"
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.8, duration: 0.6 }}
+      style={{ opacity: arrowAlpha }}
     >
       <svg
-        width="140"
-        height="120"
-        viewBox="0 0 140 120"
-        className="text-gray-400 dark:text-gray-500"
+        width="263.32"
+        height="70.35"
+        viewBox="0 0 263.32 70.35"
+        style={{ opacity: arrowAlpha }}
       >
         {/* Основная кривая стрелки - единый путь с элегантной петлей как курсивная 'e' или спираль */}
+        {/* Начинается сверху слева, образует петлю в верхней части, идет вниз вправо */}
         <motion.path
-          d="M 8 8 Q 12 18, 18 28 Q 20 32, 24 36 Q 26 38, 24 40 Q 22 42, 20 40 Q 18 38, 20 36 Q 22 34, 26 36 Q 32 40, 40 48 Q 50 58, 62 68 Q 75 78, 92 88 Q 108 95, 120 98 L 128 100"
-          stroke="currentColor"
-          strokeWidth="1.5"
+          d="M 8 8 Q 15 15, 25 20 Q 30 22, 35 24 Q 38 26, 36 28 Q 34 30, 32 28 Q 30 26, 32 24 Q 34 22, 40 25 Q 50 30, 65 38 Q 85 48, 110 55 Q 135 62, 160 65 Q 185 68, 210 65 Q 235 62, 250 58 L 255 56"
+          stroke={arrowColor}
+          strokeWidth={strokeWidth}
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -41,10 +48,10 @@ function LoopArrow() {
             repeatDelay: 4
           }}
         />
-        {/* Стрелка на конце - тонкая треугольная, указывает в правый нижний угол */}
+        {/* Стрелка на конце - указывает в правый нижний угол */}
         <motion.polygon
-          points="125,96 130,100 125,104"
-          fill="currentColor"
+          points="248,54 255,56 250,60"
+          fill={arrowColor}
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1, 0.7] }}
           transition={{
