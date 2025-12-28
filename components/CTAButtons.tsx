@@ -9,11 +9,11 @@ type Props = {
 
 // Компонент стрелки с петлей в виде буквы 'e' (точный SVG путь из дизайна, указывает на кнопку "Get early access")
 // Стрелка без фона, сливается с фоном страницы, большая и жирная для лучшей видимости
-// Позиционируется левее всех кнопок и полей, чтобы был виден конец стрелки
+// Позиционируется левее и выше всех кнопок и полей, чтобы был виден конец стрелки
 function LoopArrow() {
   return (
     <motion.div
-      className="absolute -left-40 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none z-0"
+      className="absolute -left-48 top-1/3 -translate-y-1/2 hidden lg:block pointer-events-none z-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 0.8 }}
       transition={{ delay: 0.5, duration: 0.5 }}
