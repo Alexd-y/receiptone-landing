@@ -74,7 +74,7 @@ export default function Sections() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="inline-flex items-center gap-2 rounded-2xl bg-white/80 px-4 py-2.5 text-xs font-medium shadow-lg ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+                className="inline-flex items-center gap-2 rounded-2xl liquid-glass-badge px-4 py-2.5 text-xs font-medium"
               >
                 Built for US/Canada self-employed & small business
               </motion.div>
@@ -82,7 +82,7 @@ export default function Sections() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="inline-flex items-center gap-1.5 rounded-2xl bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-4 py-2.5 text-xs font-semibold text-accent-secondary shadow-lg ring-1 ring-accent-secondary/20 backdrop-blur-xl"
+                className="inline-flex items-center gap-1.5 rounded-2xl liquid-glass-badge px-4 py-2.5 text-xs font-semibold text-accent-secondary"
               >
                 <Sparkles size={14} className="animate-pulse" />
                 <span>AI-Powered</span>
@@ -107,7 +107,7 @@ export default function Sections() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 }}
-              className="mt-8 rounded-3xl bg-white/80 p-6 text-sm shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+              className="mt-8 rounded-3xl liquid-glass-card p-6 text-sm"
             >
               <div className="flex items-center gap-2 mb-4">
                 <div className="inline-flex items-center justify-center rounded-xl bg-accent-secondary/10 p-2">
@@ -145,7 +145,7 @@ export default function Sections() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+              className="rounded-3xl liquid-glass-card p-7"
             >
               <div className="flex items-center gap-2 mb-3">
                 <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
@@ -165,7 +165,7 @@ export default function Sections() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+              className="rounded-3xl liquid-glass-card p-7"
             >
               <div className="flex items-center gap-2 mb-3">
                 <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
@@ -240,7 +240,7 @@ export default function Sections() {
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-2xl bg-white/80 px-4 py-2 text-xs font-medium shadow-lg ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-2xl liquid-glass-badge px-4 py-2 text-xs font-medium mb-4">
               <Sparkles size={12} className="text-accent-secondary" />
               <span>Benefits</span>
             </div>
@@ -253,7 +253,7 @@ export default function Sections() {
           </div>
           <a
             href="#lead"
-            className="inline-flex items-center justify-center rounded-2xl bg-white/90 px-6 py-3.5 font-semibold shadow-xl ring-1 ring-black/5 backdrop-blur-xl transition-all hover:scale-105 hover:shadow-2xl active:scale-95 dark:bg-white/10 dark:ring-white/10"
+            className="inline-flex items-center justify-center rounded-2xl liquid-glass-button px-6 py-3.5 font-semibold"
           >
             Get early access
           </a>
@@ -267,7 +267,7 @@ export default function Sections() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="group rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl transition-all hover:shadow-2xl hover:-translate-y-1 dark:bg-white/10 dark:ring-white/10"
+              className="group rounded-3xl liquid-glass-card p-7 transition-all hover:-translate-y-1"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-accent-secondary/20 to-accent-secondary/10 shadow-lg ring-1 ring-accent-secondary/10">
@@ -314,17 +314,17 @@ export default function Sections() {
               <div className="text-sm font-semibold opacity-90">AI Scan & Organize</div>
             </div>
             <div className="space-y-3">
-              <div className="rounded-2xl bg-white/80 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10">
+              <div className="rounded-2xl liquid-glass p-4">
                 <div className="text-xs opacity-60">04/30/2025</div>
                 <div className="font-semibold mt-1">Currys PC World</div>
                 <div className="text-xs mt-1 opacity-75">IT Supplies • $229</div>
               </div>
-              <div className="rounded-2xl bg-white/80 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10">
+              <div className="rounded-2xl liquid-glass p-4">
                 <div className="text-xs opacity-60">04/29/2025</div>
                 <div className="font-semibold mt-1">SHELL GAS STATION</div>
                 <div className="text-xs mt-1 opacity-75">Fuel & Transportation • $29.50</div>
               </div>
-              <div className="rounded-2xl bg-white/80 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10">
+              <div className="rounded-2xl liquid-glass p-4">
                 <div className="text-xs opacity-60">04/28/2025</div>
                 <div className="font-semibold mt-1">Cafe Morgenrot</div>
                 <div className="text-xs mt-1 opacity-75">Miscellaneous • $6.50</div>
@@ -343,7 +343,7 @@ export default function Sections() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+              className="rounded-3xl liquid-glass-card p-7"
             >
               <div className="flex items-center gap-4 mb-5">
                 <div className="rounded-2xl bg-gradient-to-br from-accent-secondary/20 to-accent-secondary/10 p-3 shadow-lg ring-1 ring-accent-secondary/20">
@@ -363,31 +363,31 @@ export default function Sections() {
                 </div>
               </div>
               <div className="space-y-3 text-sm">
-                <div className="flex items-center gap-3 rounded-xl bg-white/60 p-2.5 dark:bg-white/5">
+                <div className="flex items-center gap-3 rounded-xl liquid-glass p-2.5">
                   <svg className="w-5 h-5 text-accent-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   <span className="opacity-80 font-medium">MERCHANT</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-xl bg-white/60 p-2.5 dark:bg-white/5">
+                <div className="flex items-center gap-3 rounded-xl liquid-glass p-2.5">
                   <svg className="w-5 h-5 text-accent-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   <span className="opacity-80 font-medium">DATE</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-xl bg-white/60 p-2.5 dark:bg-white/5">
+                <div className="flex items-center gap-3 rounded-xl liquid-glass p-2.5">
                   <svg className="w-5 h-5 text-accent-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   <span className="opacity-80 font-medium">TOTAL</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-xl bg-white/60 p-2.5 dark:bg-white/5">
+                <div className="flex items-center gap-3 rounded-xl liquid-glass p-2.5">
                   <svg className="w-5 h-5 text-accent-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   <span className="opacity-80 font-medium">PAYMENT METHOD</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-xl bg-white/60 p-2.5 dark:bg-white/5">
+                <div className="flex items-center gap-3 rounded-xl liquid-glass p-2.5">
                   <svg className="w-5 h-5 text-accent-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -432,19 +432,19 @@ export default function Sections() {
               <div className="text-sm font-semibold opacity-90">AI Multi-Currency Support</div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-2xl bg-gradient-to-br from-white/80 to-white/60 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10 text-center transition-all hover:scale-105">
+              <div className="rounded-2xl liquid-glass p-4 text-center transition-all hover:scale-105">
                 <div className="text-3xl font-bold">$</div>
                 <div className="text-xs opacity-60 mt-2 font-medium">USD</div>
               </div>
-              <div className="rounded-2xl bg-gradient-to-br from-white/80 to-white/60 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10 text-center transition-all hover:scale-105">
+              <div className="rounded-2xl liquid-glass p-4 text-center transition-all hover:scale-105">
                 <div className="text-3xl font-bold">€</div>
                 <div className="text-xs opacity-60 mt-2 font-medium">EUR</div>
               </div>
-              <div className="rounded-2xl bg-gradient-to-br from-white/80 to-white/60 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10 text-center transition-all hover:scale-105">
+              <div className="rounded-2xl liquid-glass p-4 text-center transition-all hover:scale-105">
                 <div className="text-3xl font-bold">£</div>
                 <div className="text-xs opacity-60 mt-2 font-medium">GBP</div>
               </div>
-              <div className="rounded-2xl bg-gradient-to-br from-white/80 to-white/60 p-4 shadow-lg ring-1 ring-black/5 dark:bg-white/5 dark:ring-white/10 text-center transition-all hover:scale-105">
+              <div className="rounded-2xl liquid-glass p-4 text-center transition-all hover:scale-105">
                 <div className="text-3xl font-bold">¥</div>
                 <div className="text-xs opacity-60 mt-2 font-medium">JPY</div>
               </div>
@@ -462,7 +462,7 @@ export default function Sections() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+              className="rounded-3xl liquid-glass-card p-7"
             >
               <div className="flex items-center gap-2 mb-5">
                 <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
@@ -471,19 +471,19 @@ export default function Sections() {
                 <div className="text-sm font-semibold opacity-90">AI Expense Report</div>
               </div>
               <div className="space-y-3 text-sm">
-                <div className="flex justify-between py-3 px-4 rounded-xl bg-white/60 border border-black/5 dark:bg-white/5 dark:border-white/10">
+                <div className="flex justify-between py-3 px-4 rounded-xl liquid-glass">
                   <span className="opacity-80">Professional Services (EUR)</span>
                   <span className="font-semibold">€2,100.00</span>
                 </div>
-                <div className="flex justify-between py-3 px-4 rounded-xl bg-white/60 border border-black/5 dark:bg-white/5 dark:border-white/10">
+                <div className="flex justify-between py-3 px-4 rounded-xl liquid-glass">
                   <span className="opacity-80">Marketing (EUR)</span>
                   <span className="font-semibold">€1,255.00</span>
                 </div>
-                <div className="flex justify-between py-3 px-4 rounded-xl bg-white/60 border border-black/5 dark:bg-white/5 dark:border-white/10">
+                <div className="flex justify-between py-3 px-4 rounded-xl liquid-glass">
                   <span className="opacity-80">Subscriptions (USD)</span>
                   <span className="font-semibold">$66.59</span>
                 </div>
-                <div className="flex justify-between py-3 px-4 rounded-xl bg-white/60 border border-black/5 dark:bg-white/5 dark:border-white/10">
+                <div className="flex justify-between py-3 px-4 rounded-xl liquid-glass">
                   <span className="opacity-80">Healthcare (EUR)</span>
                   <span className="font-semibold">€240.00</span>
                 </div>
@@ -740,7 +740,7 @@ export default function Sections() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+              className="rounded-3xl liquid-glass-card p-7"
             >
               <div className="flex items-center gap-2 mb-5">
                 <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
@@ -784,7 +784,7 @@ export default function Sections() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+              className="rounded-3xl liquid-glass-card p-7"
             >
               <div className="flex items-center gap-2 mb-5">
                 <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
