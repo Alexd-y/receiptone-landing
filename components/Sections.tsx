@@ -74,13 +74,13 @@ export default function Sections() {
             </motion.div>
 
             <h1 className="mt-4 font-[var(--font-ibm)] text-4xl font-semibold leading-tight sm:text-5xl">
-              Track receipts, mileage & tax-ready reports
+              Track receipts and mileage. Export tax-ready reports.
             </h1>
 
             <p className="mt-4 max-w-xl text-sm leading-relaxed opacity-80">
-              Keep your receipts organized, eliminate "lost receipt" stress, and generate accountant-ready reports in minutes.
+              Keep receipts organized, eliminate "lost receipt" stress, and generate accountant-ready reports in minutes.
               <br />
-              Built for operators who value speed, clarity, and control — not more admin work.
+              Built for speed and clarity — without extra admin.
             </p>
 
             <div className="relative mt-6 overflow-visible">
@@ -90,11 +90,11 @@ export default function Sections() {
             <div className="mt-6 rounded-xl2 bg-white/60 p-5 text-sm shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
               <div className="font-[var(--font-ibm)] font-semibold">What you get with ReceiptOne Web</div>
               <ul className="mt-2 list-disc pl-5 opacity-85">
-                <li>Bulk receipt upload and quick review</li>
-                <li>Expense analytics and data exports</li>
-                <li>Mileage and trip tracking</li>
-                <li>Tax-ready reports and documents</li>
-                <li>Built-in referral system</li>
+                <li><strong>Bulk receipt upload & quick review</strong></li>
+                <li><strong>Expense analytics with CSV & PDF exports</strong></li>
+                <li><strong>Mileage and trip tracking</strong></li>
+                <li><strong>Tax-ready reports and document storage</strong></li>
+                <li><strong>Built-in referral system</strong></li>
               </ul>
             </div>
           </div>
