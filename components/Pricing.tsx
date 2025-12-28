@@ -7,13 +7,25 @@ export default function Pricing() {
       price: "CAD 0",
       period: "/ month / seat, billed annually at $0",
       description: "Discover for free what ReceiptOne can do for you. Great for personal use.",
+      keyFeatures: [
+        { value: "100", label: "AI Scans / Month" },
+        { value: "5", label: "Requests / Month" }
+      ],
       planIncludes: [
         "Web workspace synced with mobile backend",
         "Bulk upload (drag & drop)",
         "Mileage tracking & trip organization",
-        "Reports export for accountant"
-      ],
-      keyFeatures: null
+        "Reports export for accountant",
+        "AI-Powered Expense & Income Tracking",
+        "Mobile and Web App with Real-Time Sync",
+        "Auto-Forward Email Receipts",
+        "Supports 150+ Currencies",
+        "Secure Storage for 10+ Years",
+        "Expense Reports (CSV, PDF, Excel)",
+        "Export Your Data (PDF, Excel, CSV, ZIP)",
+        "Share Documents via Link",
+        "Invite Your Accountant"
+      ]
     },
     {
       name: "PRO",
@@ -91,6 +103,18 @@ export default function Pricing() {
 
             {/* Description */}
             <p className="mt-4 text-sm opacity-80">{p.description}</p>
+
+            {/* Key Features */}
+            {p.keyFeatures && p.keyFeatures.length > 0 && (
+              <div className="mt-4 space-y-2">
+                {p.keyFeatures.map((feature: { value: string; label: string }, idx: number) => (
+                  <div key={idx} className="flex items-center gap-2 text-sm">
+                    <span className="font-bold text-accent-primary">{feature.value}</span>
+                    <span className="opacity-75">{feature.label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* Plan Includes */}
             <div className="mt-6">
