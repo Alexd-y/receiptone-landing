@@ -127,6 +127,66 @@ body {
   }
 }
 
+/* Fixed Header with Liquid Glass Effect */
+.liquid-glass-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(50px) saturate(200%);
+  -webkit-backdrop-filter: blur(50px) saturate(200%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 
+    0 1px 0 0 rgba(255, 255, 255, 0.5) inset,
+    0 4px 20px -4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+.liquid-glass-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.dark .liquid-glass-header {
+  background: rgba(11, 11, 15, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 1px 0 0 rgba(255, 255, 255, 0.1) inset,
+    0 4px 20px -4px rgba(0, 0, 0, 0.5);
+}
+
+.dark .liquid-glass-header::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent
+  );
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(50px)) {
+  .liquid-glass-header {
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .dark .liquid-glass-header {
+    background: rgba(11, 11, 15, 0.95);
+  }
+}
+
 .dark .liquid-glass::before {
   background: linear-gradient(
     90deg,

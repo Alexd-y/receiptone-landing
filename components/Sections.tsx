@@ -66,7 +66,7 @@ export default function Sections() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 pb-10 pt-12">
+      <section className="mx-auto max-w-6xl px-6 pb-10 pt-24">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="overflow-visible">
             <div className="flex flex-wrap items-center gap-2">
