@@ -123,6 +123,55 @@ export default function Sections() {
         </div>
       </section>
 
+      {/* Stats Marquee */}
+      <section className="mx-auto max-w-full overflow-hidden border-y border-black/5 py-6 dark:border-white/10">
+        <div className="relative flex w-full">
+          <div className="flex animate-marquee whitespace-nowrap">
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">500K+</span>
+              <span className="text-sm opacity-75">Receipts scanned</span>
+            </div>
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">50K+</span>
+              <span className="text-sm opacity-75">Active users</span>
+            </div>
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">4.8★</span>
+              <span className="text-sm opacity-75">Average rating</span>
+            </div>
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">2M+</span>
+              <span className="text-sm opacity-75">Miles tracked</span>
+            </div>
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">100K+</span>
+              <span className="text-sm opacity-75">Reports generated</span>
+            </div>
+            {/* Duplicate for seamless loop */}
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">500K+</span>
+              <span className="text-sm opacity-75">Receipts scanned</span>
+            </div>
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">50K+</span>
+              <span className="text-sm opacity-75">Active users</span>
+            </div>
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">4.8★</span>
+              <span className="text-sm opacity-75">Average rating</span>
+            </div>
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">2M+</span>
+              <span className="text-sm opacity-75">Miles tracked</span>
+            </div>
+            <div className="mx-8 flex items-center gap-3">
+              <span className="text-2xl font-bold">100K+</span>
+              <span className="text-sm opacity-75">Reports generated</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="mx-auto max-w-6xl px-6 py-14">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">

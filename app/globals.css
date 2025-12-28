@@ -25,3 +25,17 @@ body {
 ::selection {
   background: rgba(11, 11, 15, 0.25);
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  width: fit-content;
+}
