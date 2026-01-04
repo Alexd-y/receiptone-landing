@@ -6,13 +6,13 @@ export default function SignUpPage() {
     <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6 py-16">
       <div className="mb-8 text-center">
         <Brand />
-        <h1 className="mt-6 font-[var(--font-ibm)] text-3xl font-semibold">Sign up</h1>
-        <p className="mt-2 text-sm opacity-80">Create your ReceiptOne account</p>
+        <h1 className="mt-6 font-[var(--font-ibm)] text-3xl font-semibold dark:text-white">Sign up</h1>
+        <p className="mt-2 text-sm opacity-80 dark:text-white/80">Create your ReceiptOne account</p>
       </div>
 
       <form className="space-y-4">
         <div>
-          <label htmlFor="name" className="mb-2 block text-sm font-medium">
+          <label htmlFor="name" className="mb-2 block text-sm font-medium dark:text-white/90">
             Name
           </label>
           <input
@@ -20,13 +20,13 @@ export default function SignUpPage() {
             type="text"
             autoComplete="name"
             required
-            className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-black/20 dark:ring-white/10"
+            className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm text-ink-900 shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-white/10 dark:text-white dark:ring-white/20 dark:placeholder:text-white/50"
             placeholder="Your name"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="mb-2 block text-sm font-medium">
+          <label htmlFor="email" className="mb-2 block text-sm font-medium dark:text-white/90">
             Email
           </label>
           <input
@@ -34,13 +34,13 @@ export default function SignUpPage() {
             type="email"
             autoComplete="email"
             required
-            className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-black/20 dark:ring-white/10"
+            className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm text-ink-900 shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-white/10 dark:text-white dark:ring-white/20 dark:placeholder:text-white/50"
             placeholder="you@company.com"
           />
         </div>
 
         <div>
-          <label htmlFor="password" className="mb-2 block text-sm font-medium">
+          <label htmlFor="password" className="mb-2 block text-sm font-medium dark:text-white/90">
             Password
           </label>
           <input
@@ -48,22 +48,22 @@ export default function SignUpPage() {
             type="password"
             autoComplete="new-password"
             required
-            className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-black/20 dark:ring-white/10"
+            className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm text-ink-900 shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-white/10 dark:text-white dark:ring-white/20 dark:placeholder:text-white/50"
             placeholder="••••••••"
           />
-          <p className="mt-1 text-xs opacity-70">At least 8 characters</p>
+          <p className="mt-1 text-xs opacity-70 dark:text-white/70">At least 8 characters</p>
         </div>
 
         <div>
-          <label className="flex cursor-pointer items-start gap-3 text-sm">
-            <input type="checkbox" required className="mt-1 h-4 w-4" />
-            <span className="opacity-90">
+          <label className="flex cursor-pointer items-start gap-3 text-sm dark:text-white/90">
+            <input type="checkbox" required className="mt-1 h-4 w-4 accent-accent-secondary dark:accent-accent-secondary" />
+            <span className="opacity-90 dark:opacity-95">
               I agree to the{" "}
-              <Link href="/terms" className="text-accent-primary underline">
+              <Link href="/terms" className="text-accent-primary dark:text-accent-secondary underline dark:text-white/90">
                 Terms
               </Link>{" "}
               and{" "}
-              <Link href="/privacy" className="text-accent-primary underline">
+              <Link href="/privacy" className="text-accent-primary dark:text-accent-secondary underline dark:text-white/90">
                 Privacy Policy
               </Link>
             </span>
@@ -78,9 +78,9 @@ export default function SignUpPage() {
         </button>
       </form>
 
-      <div className="mt-6 text-center text-sm opacity-80">
+      <div className="mt-6 text-center text-sm opacity-80 dark:text-white/80">
         Already have an account?{" "}
-        <Link href="/signin" className="text-accent-primary hover:underline">
+        <Link href="/signin" className="text-accent-primary dark:text-accent-secondary hover:underline dark:text-white/90">
           Sign in
         </Link>
       </div>

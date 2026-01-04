@@ -299,6 +299,21 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Dark theme form improvements */
+.dark select {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark select option {
+  background-color: #1A1A24;
+  color: white;
+}
+
+.dark input[type="checkbox"] {
+  accent-color: #10B981;
+}
+
 /* iOS-style selection */
 ::selection {
   background: rgba(16, 185, 129, 0.2);

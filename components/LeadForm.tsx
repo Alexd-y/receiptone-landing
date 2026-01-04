@@ -62,16 +62,16 @@ export default function LeadForm() {
             <span>🎯</span>
             <span>Claim Your Free Trial</span>
           </div>
-          <h3 className="mt-2 font-[var(--font-ibm)] text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
+          <h3 className="mt-2 font-[var(--font-ibm)] text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight dark:text-white">
             Start Saving Money <span className="sexy-gradient">Today</span>
           </h3>
-          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg opacity-95 font-semibold">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg opacity-95 font-semibold dark:text-white/90">
             Join <span className="font-extrabold text-accent-secondary text-xl sm:text-2xl">50,000+</span> smart business owners who are maximizing their tax refunds.
             <br />
-            <span className="text-xs sm:text-sm md:text-base opacity-90 mt-2 block font-medium">
+            <span className="text-xs sm:text-sm md:text-base opacity-90 mt-2 block font-medium dark:opacity-95">
               🇺🇸 🇨🇦 No credit card required. Start your 7-day free trial now.
             </span>
-            <span className="text-xs sm:text-sm opacity-75 mt-1 block font-normal">
+            <span className="text-xs sm:text-sm opacity-75 mt-1 block font-normal dark:opacity-85">
               Average user saves $3,200+ per year • IRS & CRA compliant
             </span>
           </p>
@@ -91,63 +91,63 @@ export default function LeadForm() {
               />
             </div>
 
-            <label className="text-sm font-medium">Email (required)</label>
+            <label className="text-sm font-medium dark:text-white/90">Email (required)</label>
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               inputMode="email"
               autoComplete="email"
               placeholder="you@company.com"
-              className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-black/20 dark:ring-white/10"
+              className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm text-ink-900 shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-white/10 dark:text-white dark:ring-white/20 dark:placeholder:text-white/50"
             />
 
-            <label className="mt-2 text-sm font-medium">Name (optional)</label>
+            <label className="mt-2 text-sm font-medium dark:text-white/90">Name (optional)</label>
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
               autoComplete="name"
               placeholder="Your name"
-              className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-black/20 dark:ring-white/10"
+              className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm text-ink-900 shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-white/10 dark:text-white dark:ring-white/20 dark:placeholder:text-white/50"
             />
 
-            <label className="mt-2 text-sm font-medium">I am</label>
+            <label className="mt-2 text-sm font-medium dark:text-white/90">I am</label>
             <select
               value={persona}
               onChange={(e) => setPersona(e.target.value)}
-              className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-black/20 dark:ring-white/10"
+              className="w-full rounded-xl bg-white/80 px-4 py-3 text-sm text-ink-900 shadow-glass ring-1 ring-black/10 outline-none transition focus:ring-2 focus:ring-accent-primary/40 dark:bg-white/10 dark:text-white dark:ring-white/20"
             >
-              <option>Self-employed</option>
-              <option>Small business</option>
-              <option>Accountant/Bookkeeper</option>
+              <option value="Self-employed">Self-employed</option>
+              <option value="Small business">Small business</option>
+              <option value="Accountant/Bookkeeper">Accountant/Bookkeeper</option>
             </select>
 
             <div className="mt-3 space-y-3">
-              <label className="flex cursor-pointer items-start gap-3 text-sm">
+              <label className="flex cursor-pointer items-start gap-3 text-sm dark:text-white/90">
                 <input
                   type="checkbox"
                   checked={consentMarketing}
                   onChange={(e) => setConsentMarketing(e.target.checked)}
-                  className="mt-1 h-4 w-4"
+                  className="mt-1 h-4 w-4 accent-accent-secondary dark:accent-accent-secondary"
                 />
-                <span className="opacity-90">
+                <span className="opacity-90 dark:opacity-95">
                   I agree to receive early access and product emails from ReceiptOne.
-                  <span className="block text-xs opacity-70">
+                  <span className="block text-xs opacity-70 dark:opacity-80">
                     Required to be contacted about access and onboarding.
                   </span>
                 </span>
               </label>
 
               {enableAnalyticsConsent && (
-                <label className="flex cursor-pointer items-start gap-3 text-sm">
+                <label className="flex cursor-pointer items-start gap-3 text-sm dark:text-white/90">
                   <input
                     type="checkbox"
                     checked={consentAnalytics}
                     onChange={(e) => setConsentAnalytics(e.target.checked)}
-                    className="mt-1 h-4 w-4"
+                    className="mt-1 h-4 w-4 accent-accent-secondary dark:accent-accent-secondary"
                   />
-                  <span className="opacity-90">
+                  <span className="opacity-90 dark:opacity-95">
                     I consent to anonymous analytics cookies to improve the product experience.
-                    <span className="block text-xs opacity-70">
+                    <span className="block text-xs opacity-70 dark:opacity-80">
                       Optional. You can still join early access without this consent.
                     </span>
                   </span>
@@ -199,13 +199,13 @@ export default function LeadForm() {
               </div>
             )}
 
-            <p className="mt-2 text-xs opacity-70">
+            <p className="mt-2 text-xs opacity-70 dark:opacity-80 dark:text-white/80">
               By submitting, you agree to the{" "}
-              <a href="/terms" className="underline">
+              <a href="/terms" className="underline dark:text-white/90">
                 Terms
               </a>{" "}
               and{" "}
-              <a href="/privacy" className="underline">
+              <a href="/privacy" className="underline dark:text-white/90">
                 Privacy Policy
               </a>
               .

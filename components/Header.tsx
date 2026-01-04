@@ -35,7 +35,7 @@ export default function Header() {
             </a>
             <a
               href="/signin"
-              className="rounded-xl px-3 lg:px-4 py-2 text-xs lg:text-sm font-medium opacity-80 transition hover:opacity-100"
+              className="rounded-xl px-3 lg:px-4 py-2 text-xs lg:text-sm font-medium opacity-80 transition hover:opacity-100 dark:text-white/90 dark:hover:text-white"
             >
               Sign in
             </a>
@@ -88,7 +88,7 @@ export default function Header() {
             <a
               href="/signin"
               onClick={() => setIsMenuOpen(false)}
-              className="rounded-xl px-4 py-3 text-base font-medium opacity-80 transition hover:opacity-100 hover:bg-black/5 dark:hover:bg-white/5"
+              className="rounded-xl px-4 py-3 text-base font-medium opacity-80 transition hover:opacity-100 hover:bg-black/5 dark:text-white/90 dark:hover:text-white dark:hover:bg-white/5"
             >
               Sign in
             </a>
