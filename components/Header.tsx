@@ -14,34 +14,34 @@ export default function Header() {
         <Brand />
         <div className="flex items-center gap-2 sm:gap-3">
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-3">
+          <nav className="hidden md:flex items-center gap-2 lg:gap-3">
             <a
               href="#pricing"
-              className="rounded-xl px-3 py-2 text-sm font-medium opacity-80 transition hover:opacity-100"
+              className="rounded-xl px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium opacity-80 transition hover:opacity-100"
             >
               Pricing
             </a>
             <a
               href="#faq"
-              className="rounded-xl px-3 py-2 text-sm font-medium opacity-80 transition hover:opacity-100"
+              className="rounded-xl px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium opacity-80 transition hover:opacity-100"
             >
               FAQ
             </a>
             <a
               href="#lead"
-              className="rounded-xl px-3 py-2 text-sm font-medium opacity-80 transition hover:opacity-100"
+              className="rounded-xl px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium opacity-80 transition hover:opacity-100"
             >
               Get access
             </a>
             <a
               href="/signin"
-              className="rounded-xl px-4 py-2 text-sm font-medium opacity-80 transition hover:opacity-100"
+              className="rounded-xl px-3 lg:px-4 py-2 text-xs lg:text-sm font-medium opacity-80 transition hover:opacity-100"
             >
               Sign in
             </a>
             <a
               href="/signup"
-              className="rounded-2xl bg-accent-primary px-5 py-2.5 text-sm font-semibold text-white shadow-xl transition-all hover:scale-105 active:scale-95 liquid-glass-button"
+              className="rounded-2xl bg-ink-900 dark:bg-ink-800 px-4 lg:px-5 py-2 lg:py-2.5 text-xs lg:text-sm font-semibold text-white shadow-xl transition-all hover:scale-105 active:scale-95 liquid-glass-button"
             >
               Sign up
             </a>
@@ -50,7 +50,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-xl liquid-glass-button"
+            className="md:hidden p-2 rounded-xl liquid-glass-button"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -62,7 +62,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden border-t border-black/5 dark:border-white/10 liquid-glass-header">
+        <div className="md:hidden border-t border-black/5 dark:border-white/10 liquid-glass-header">
           <nav className="mx-auto max-w-6xl px-4 py-4 flex flex-col gap-2">
             <a
               href="#pricing"
@@ -95,7 +95,7 @@ export default function Header() {
             <a
               href="/signup"
               onClick={() => setIsMenuOpen(false)}
-              className="rounded-2xl bg-accent-primary px-4 py-3 text-base font-semibold text-white shadow-xl transition-all active:scale-95 liquid-glass-button text-center mt-2"
+              className="rounded-2xl bg-ink-900 dark:bg-ink-800 px-4 py-3 text-base font-semibold text-white shadow-xl transition-all active:scale-95 liquid-glass-button text-center mt-2"
             >
               Sign up
             </a>
