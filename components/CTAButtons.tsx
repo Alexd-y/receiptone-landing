@@ -50,17 +50,17 @@ function LoopArrow() {
 
 export default function CTAButtons({ onPrimaryClick }: Props) {
   return (
-    <div className="relative flex flex-nowrap gap-3 items-center pl-8 lg:pl-0 overflow-visible">
-      {/* Loop Arrow - левее всех кнопок и полей, указывает на кнопку "Get early access", без фона, тонкая с пониженной непрозрачностью */}
+    <div className="relative flex flex-col sm:flex-row flex-wrap gap-3 items-stretch sm:items-center pl-0 overflow-visible">
+      {/* Loop Arrow - только для desktop */}
       <LoopArrow />
 
       {/* Primary Button - Get early access (черная кнопка с белым текстом) */}
       <motion.button
         type="button"
         onClick={onPrimaryClick}
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="relative z-10 inline-flex flex-row items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-accent-primary via-accent-primary to-accent-primary/90 px-8 py-5 font-bold text-white shadow-2xl transition-all hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] min-w-0 group overflow-hidden"
+        className="relative z-10 w-full sm:w-auto inline-flex flex-row items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-accent-primary via-accent-primary to-accent-primary/90 px-6 sm:px-8 py-4 sm:py-5 font-bold text-white shadow-2xl transition-all hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] group overflow-hidden"
       >
         {/* Animated gradient overlay */}
         <motion.div
@@ -75,14 +75,14 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
           }}
         />
         {/* Sparkles icon слева */}
-        <Sparkles size={20} className="relative z-10 animate-pulse" />
-        <span className="relative z-10 text-lg leading-tight text-left font-bold">
-          Claim Your<br />
+        <Sparkles size={18} className="sm:w-5 sm:h-5 relative z-10 animate-pulse" />
+        <span className="relative z-10 text-base sm:text-lg leading-tight text-center sm:text-left font-bold">
+          Claim Your<br className="sm:hidden" />
           <span className="text-accent-secondary">Free Trial</span>
         </span>
         {/* Arrow icon */}
         <motion.svg
-          className="relative z-10 w-5 h-5 ml-1"
+          className="relative z-10 w-5 h-5 ml-1 hidden sm:block"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -93,16 +93,16 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
         </motion.svg>
       </motion.button>
 
-      {/* Secondary Buttons - светлые бежевые кнопки в одну строчку */}
-      <div className="flex flex-nowrap gap-3">
+      {/* Secondary Buttons - светлые бежевые кнопки в одну строчку на desktop, вертикально на mobile */}
+      <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto">
         {/* Start free - светлая бежевая кнопка с темным текстом */}
         <motion.a
           href="#pricing"
-          whileHover={{ scale: 1.05, y: -2 }}
+          whileHover={{ scale: 1.02, y: -2 }}
           whileTap={{ scale: 0.98 }}
-          className="relative z-10 inline-flex flex-col items-center justify-center rounded-2xl liquid-glass-button px-6 py-4 font-bold text-ink-900 dark:text-white text-center min-w-[120px] group"
+          className="relative z-10 w-full sm:w-auto inline-flex flex-col items-center justify-center rounded-2xl liquid-glass-button px-6 py-4 font-bold text-ink-900 dark:text-white text-center sm:min-w-[120px] group"
         >
-          <span className="text-base leading-tight">
+          <span className="text-sm sm:text-base leading-tight">
             <span className="text-accent-secondary">7-Day</span><br />
             Free Trial
           </span>
@@ -111,11 +111,11 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
         {/* Book a demo - светлая бежевая кнопка с темным текстом, без иконки */}
         <motion.a
           href="#lead"
-          whileHover={{ scale: 1.05, y: -2 }}
+          whileHover={{ scale: 1.02, y: -2 }}
           whileTap={{ scale: 0.98 }}
-          className="relative z-10 inline-flex flex-col items-center justify-center rounded-2xl liquid-glass-button px-6 py-4 font-bold text-ink-900 dark:text-white text-center min-w-[120px]"
+          className="relative z-10 w-full sm:w-auto inline-flex flex-col items-center justify-center rounded-2xl liquid-glass-button px-6 py-4 font-bold text-ink-900 dark:text-white text-center sm:min-w-[120px]"
         >
-          <span className="text-base leading-tight">
+          <span className="text-sm sm:text-base leading-tight">
             See It<br />
             Live Demo
           </span>
@@ -124,11 +124,11 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
         {/* Download app - светлая бежевая кнопка с темным текстом, без иконки */}
         <motion.a
           href="#stores"
-          whileHover={{ scale: 1.05, y: -2 }}
+          whileHover={{ scale: 1.02, y: -2 }}
           whileTap={{ scale: 0.98 }}
-          className="relative z-10 inline-flex flex-col items-center justify-center rounded-2xl liquid-glass-button px-6 py-4 font-bold text-ink-900 dark:text-white text-center min-w-[120px]"
+          className="relative z-10 w-full sm:w-auto inline-flex flex-col items-center justify-center rounded-2xl liquid-glass-button px-6 py-4 font-bold text-ink-900 dark:text-white text-center sm:min-w-[120px]"
         >
-          <span className="text-base leading-tight">
+          <span className="text-sm sm:text-base leading-tight">
             Get Mobile<br />
             App Now
           </span>

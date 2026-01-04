@@ -70,33 +70,33 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="mx-auto max-w-6xl px-6 py-14">
+    <section id="pricing" className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
       <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-4 py-1.5 text-xs font-bold text-accent-secondary mb-3">
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold text-accent-secondary mb-2 sm:mb-3">
             <span>💎</span>
             <span>Choose Your Savings Plan</span>
           </div>
-          <h2 className="mt-2 font-[var(--font-ibm)] text-5xl font-extrabold tracking-tight">
+          <h2 className="mt-2 font-[var(--font-ibm)] text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
             Start Free. <span className="bg-gradient-to-r from-accent-secondary via-accent-secondary/90 to-accent-secondary bg-clip-text text-transparent">Save Thousands.</span>
           </h2>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed opacity-95 font-semibold">
-            <span className="font-extrabold text-accent-secondary text-xl">7-day free trial</span> — no credit card required. 
+          <p className="mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed opacity-95 font-semibold">
+            <span className="font-extrabold text-accent-secondary text-lg sm:text-xl">7-day free trial</span> — no credit card required. 
             <br />
-            🇺🇸 🇨🇦 Join <span className="font-bold text-accent-secondary">50,000+</span> US & Canadian business owners saving an average of <span className="font-bold text-accent-secondary text-xl">$3,200+ per year</span> on taxes.
+            🇺🇸 🇨🇦 Join <span className="font-bold text-accent-secondary">50,000+</span> US & Canadian business owners saving an average of <span className="font-bold text-accent-secondary text-lg sm:text-xl">$3,200+ per year</span> on taxes.
             <br />
-            <span className="text-sm opacity-75 mt-2 block font-normal">IRS & CRA compliant • Works in all US states & Canadian provinces</span>
+            <span className="text-xs sm:text-sm opacity-75 mt-2 block font-normal">IRS & CRA compliant • Works in all US states & Canadian provinces</span>
           </p>
         </div>
         <a
           href="#lead"
-          className="inline-flex items-center justify-center rounded-xl bg-accent-primary px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95"
+          className="inline-flex items-center justify-center rounded-xl bg-accent-primary px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-base font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95 mt-4 md:mt-0"
         >
           Get early access
         </a>
       </div>
 
-      <div className="mt-8 grid gap-4 lg:grid-cols-3">
+      <div className="mt-6 sm:mt-8 grid gap-4 lg:grid-cols-3">
         {plans.map((p) => (
           <div
             key={p.name}
@@ -126,7 +126,7 @@ export default function Pricing() {
             {/* Price */}
             <div className="mt-4">
               <div className="flex items-baseline gap-2">
-                <div className="font-[var(--font-ibm)] text-4xl font-extrabold text-accent-primary">
+                <div className="font-[var(--font-ibm)] text-3xl sm:text-4xl font-extrabold text-accent-primary">
                   {p.price}
                 </div>
                 {p.priceUSD && (

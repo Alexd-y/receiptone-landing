@@ -4,26 +4,26 @@ import { MessageCircle, Phone } from "lucide-react";
 
 export default function TalkToSales() {
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      <div className="flex flex-col items-center rounded-3xl liquid-glass-card px-5 py-4">
-        <div className="flex items-center gap-2">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
+      <div className="flex flex-col items-center rounded-2xl sm:rounded-3xl liquid-glass-card px-3 sm:px-5 py-2.5 sm:py-4 shadow-2xl">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <a
             href="tel:+1234567890"
-            className="flex items-center justify-center rounded-lg p-2 transition hover:bg-green-50 dark:hover:bg-green-50/20"
+            className="flex items-center justify-center rounded-lg p-1.5 sm:p-2 transition hover:bg-green-50 dark:hover:bg-green-50/20"
             aria-label="Call sales"
           >
-            <Phone className="h-5 w-5 text-green-600 dark:text-green-500" strokeWidth={2} />
+            <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 dark:text-green-500" strokeWidth={2} />
           </a>
-          <div className="h-6 w-px bg-green-600 dark:bg-green-500" />
+          <div className="h-5 sm:h-6 w-px bg-green-600 dark:bg-green-500" />
           <a
             href="mailto:sales@receiptone.com?subject=Sales Inquiry"
-            className="flex items-center justify-center rounded-lg p-2 transition hover:bg-green-50 dark:hover:bg-green-50/20"
+            className="flex items-center justify-center rounded-lg p-1.5 sm:p-2 transition hover:bg-green-50 dark:hover:bg-green-50/20"
             aria-label="Chat with sales"
           >
-            <MessageCircle className="h-5 w-5 text-green-600 dark:text-green-500" strokeWidth={2} />
+            <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 dark:text-green-500" strokeWidth={2} />
           </a>
         </div>
-        <span className="mt-2 text-xs font-bold text-black">Talk to sales</span>
+        <span className="mt-1.5 sm:mt-2 text-[10px] sm:text-xs font-bold text-black dark:text-white">Talk to sales</span>
       </div>
     </div>
   );

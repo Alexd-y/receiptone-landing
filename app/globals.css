@@ -12,14 +12,17 @@
 
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  background: #F9EFE5;
+  background: linear-gradient(135deg, #F9EFE5 0%, #F5F1E9 50%, #FFF8F0 100%);
+  background-attachment: fixed;
 }
 
 .dark body {
-  background: #0B0B0F;
+  background: linear-gradient(135deg, #0B0B0F 0%, #151520 50%, #0F0F15 100%);
+  background-attachment: fixed;
 }
 
 ::selection {

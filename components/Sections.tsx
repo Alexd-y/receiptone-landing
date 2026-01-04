@@ -71,31 +71,32 @@ export default function Sections() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 pb-10 pt-24">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 pb-10 pt-20 sm:pt-24">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 lg:items-start">
           <div className="overflow-visible">
             <div className="flex flex-wrap items-center gap-2">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="inline-flex items-center gap-2 rounded-full liquid-glass-badge px-5 py-2.5 text-xs font-bold border-2 border-accent-secondary/30"
+                className="inline-flex items-center gap-2 rounded-full liquid-glass-badge px-3 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-xs font-bold border-2 border-accent-secondary/30"
               >
-                <span className="text-lg">🇺🇸🇨🇦</span>
-                <span>Built for US & Canada • IRS & CRA Compliant</span>
+                <span className="text-base sm:text-lg">🇺🇸🇨🇦</span>
+                <span className="hidden sm:inline">Built for US & Canada • IRS & CRA Compliant</span>
+                <span className="sm:hidden">US & Canada • IRS & CRA</span>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="inline-flex items-center gap-1.5 rounded-2xl liquid-glass-badge px-4 py-2.5 text-xs font-semibold text-accent-secondary"
+                className="inline-flex items-center gap-1.5 rounded-2xl liquid-glass-badge px-3 sm:px-4 py-2 sm:py-2.5 text-[10px] sm:text-xs font-semibold text-accent-secondary"
               >
-                <Sparkles size={14} className="animate-pulse" />
+                <Sparkles size={12} className="sm:w-3.5 sm:h-3.5 animate-pulse" />
                 <span>AI-Powered</span>
               </motion.div>
             </div>
 
-            <h1 className="mt-6 font-[var(--font-ibm)] text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+            <h1 className="mt-4 sm:mt-6 font-[var(--font-ibm)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] sm:leading-[1.05] tracking-tight">
               The IRS & CRA Want Your Money.
               <br />
               <span className="bg-gradient-to-r from-accent-secondary via-accent-secondary/90 to-accent-secondary bg-clip-text text-transparent">
@@ -103,68 +104,68 @@ export default function Sections() {
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-xl leading-relaxed opacity-95 font-semibold">
-              <span className="text-3xl font-extrabold text-accent-secondary">$500M+</span> in deductions recovered. 
+            <p className="mt-4 sm:mt-6 max-w-xl text-base sm:text-lg md:text-xl leading-relaxed opacity-95 font-semibold">
+              <span className="text-2xl sm:text-3xl font-extrabold text-accent-secondary">$500M+</span> in deductions recovered. 
               <br />
-              <span className="text-lg font-medium opacity-90">AI-powered magic that finds every deduction you're missing.</span>
+              <span className="text-sm sm:text-base md:text-lg font-medium opacity-90">AI-powered magic that finds every deduction you're missing.</span>
               <br />
-              <span className="text-base opacity-80 mt-3 block font-normal">
+              <span className="text-xs sm:text-sm md:text-base opacity-80 mt-2 sm:mt-3 block font-normal">
                 🇺🇸 🇨🇦 Trusted by <span className="font-bold text-accent-secondary">50,000+</span> US & Canadian business owners saving an average of <span className="font-bold text-accent-secondary">$3,200+</span> per year.
               </span>
             </p>
 
             {/* Trust badges */}
-            <div className="mt-8 flex flex-wrap items-center gap-6 text-sm">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 md:gap-6 text-sm">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3 }}
-                className="flex items-center gap-3 rounded-2xl liquid-glass px-4 py-2.5"
+                className="flex items-center gap-2 sm:gap-3 rounded-2xl liquid-glass px-3 sm:px-4 py-2 sm:py-2.5 flex-1 sm:flex-none"
               >
-                <div className="flex -space-x-2">
+                <div className="flex -space-x-2 shrink-0">
                   <motion.div
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0 }}
-                    className="h-10 w-10 rounded-full bg-gradient-to-br from-accent-secondary to-accent-secondary/60 border-3 border-white dark:border-ink-900 shadow-lg"
+                    className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-gradient-to-br from-accent-secondary to-accent-secondary/60 border-2 sm:border-3 border-white dark:border-ink-900 shadow-lg"
                   ></motion.div>
                   <motion.div
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
-                    className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-400 border-3 border-white dark:border-ink-900 shadow-lg"
+                    className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-400 border-2 sm:border-3 border-white dark:border-ink-900 shadow-lg"
                   ></motion.div>
                   <motion.div
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
-                    className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-400 border-3 border-white dark:border-ink-900 shadow-lg"
+                    className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-400 border-2 sm:border-3 border-white dark:border-ink-900 shadow-lg"
                   ></motion.div>
                 </div>
                 <div>
-                  <div className="font-bold text-base">50K+ Active Users</div>
-                  <div className="text-xs opacity-75">US & Canada</div>
+                  <div className="font-bold text-sm sm:text-base">50K+ Active Users</div>
+                  <div className="text-[10px] sm:text-xs opacity-75">US & Canada</div>
                 </div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4 }}
-                className="flex items-center gap-2 rounded-2xl liquid-glass px-4 py-2.5"
+                className="flex items-center gap-2 rounded-2xl liquid-glass px-3 sm:px-4 py-2 sm:py-2.5 flex-1 sm:flex-none"
               >
-                <span className="text-3xl animate-pulse">⭐</span>
+                <span className="text-2xl sm:text-3xl animate-pulse">⭐</span>
                 <div>
-                  <div className="font-bold text-lg">4.8/5</div>
-                  <div className="text-xs opacity-75">2,400+ reviews</div>
+                  <div className="font-bold text-base sm:text-lg">4.8/5</div>
+                  <div className="text-[10px] sm:text-xs opacity-75">2,400+ reviews</div>
                 </div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 }}
-                className="flex items-center gap-2 rounded-2xl liquid-glass px-4 py-2.5"
+                className="flex items-center gap-2 rounded-2xl liquid-glass px-3 sm:px-4 py-2 sm:py-2.5 flex-1 sm:flex-none"
               >
-                <span className="text-2xl">💰</span>
+                <span className="text-xl sm:text-2xl">💰</span>
                 <div>
-                  <div className="font-bold text-lg">$500M+</div>
-                  <div className="text-xs opacity-75">Found in deductions</div>
+                  <div className="font-bold text-base sm:text-lg">$500M+</div>
+                  <div className="text-[10px] sm:text-xs opacity-75">Found in deductions</div>
                 </div>
               </motion.div>
             </div>
@@ -178,22 +179,22 @@ export default function Sections() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-red-500 via-orange-500 to-red-500 px-6 py-3 text-sm font-bold text-white shadow-2xl"
+              className="mt-6 sm:mt-8 w-full sm:w-auto inline-flex items-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-red-500 via-orange-500 to-red-500 px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-white shadow-2xl"
             >
               <motion.span
                 animate={{ scale: [1, 1.3, 1], rotate: [0, 180, 360] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="text-2xl"
+                className="text-xl sm:text-2xl shrink-0"
               >
                 🔥
               </motion.span>
-              <span className="text-base">
+              <span className="text-xs sm:text-sm md:text-base leading-tight">
                 Tax Season Special: 60-Day Money-Back Guarantee + Free Setup Call
               </span>
               <motion.span
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                className="text-xl"
+                className="text-lg sm:text-xl shrink-0 hidden sm:inline"
               >
                 →
               </motion.span>
@@ -203,58 +204,58 @@ export default function Sections() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 }}
-              className="mt-8 rounded-3xl liquid-glass-card p-6 text-sm"
+              className="mt-6 sm:mt-8 rounded-2xl sm:rounded-3xl liquid-glass-card p-4 sm:p-6 text-xs sm:text-sm"
             >
-              <div className="flex items-center gap-2 mb-4">
-                <div className="inline-flex items-center justify-center rounded-xl bg-accent-secondary/10 p-2">
-                  <Zap size={16} className="text-accent-secondary" />
+              <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                <div className="inline-flex items-center justify-center rounded-xl bg-accent-secondary/10 p-1.5 sm:p-2 shrink-0">
+                  <Zap size={14} className="sm:w-4 sm:h-4 text-accent-secondary" />
                 </div>
-                <div className="font-[var(--font-ibm)] text-lg font-bold">
+                <div className="font-[var(--font-ibm)] text-sm sm:text-base md:text-lg font-bold leading-tight">
                 Everything You Need to <span className="text-accent-secondary">Maximize Your Tax Savings</span>
               </div>
               </div>
-              <ul className="space-y-3 opacity-90">
-                <li className="flex items-start gap-3">
+              <ul className="space-y-2 sm:space-y-3 opacity-90">
+                <li className="flex items-start gap-2 sm:gap-3">
                   <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-secondary shrink-0"></div>
-                  <span className="font-medium">Bulk receipt upload & quick review</span>
+                  <span className="font-medium text-xs sm:text-sm">Bulk receipt upload & quick review</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-2 sm:gap-3">
                   <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-secondary shrink-0"></div>
-                  <span className="font-medium">Expense analytics with CSV & PDF exports</span>
+                  <span className="font-medium text-xs sm:text-sm">Expense analytics with CSV & PDF exports</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-2 sm:gap-3">
                   <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-secondary shrink-0"></div>
-                  <span className="font-medium">Mileage and trip tracking</span>
+                  <span className="font-medium text-xs sm:text-sm">Mileage and trip tracking</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-2 sm:gap-3">
                   <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-secondary shrink-0"></div>
-                  <span className="font-medium">Tax-ready reports and document storage</span>
+                  <span className="font-medium text-xs sm:text-sm">Tax-ready reports and document storage</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-2 sm:gap-3">
                   <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-secondary shrink-0"></div>
-                                   <span className="font-medium">Built-in referral system</span>
+                  <span className="font-medium text-xs sm:text-sm">Built-in referral system</span>
                 </li>
               </ul>
             </motion.div>
           </div>
 
-          <div className="grid gap-5">
+          <div className="grid gap-4 sm:gap-5 mt-6 lg:mt-0">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="rounded-3xl liquid-glass-card p-7"
+              className="rounded-2xl sm:rounded-3xl liquid-glass-card p-4 sm:p-6 md:p-7"
             >
               <div className="flex items-center gap-2 mb-3">
-                <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
-                  <Brain size={18} className="text-accent-secondary" />
+                <div className="inline-flex items-center justify-center rounded-xl sm:rounded-2xl bg-accent-secondary/10 p-1.5 sm:p-2 shrink-0">
+                  <Brain size={16} className="sm:w-[18px] sm:h-[18px] text-accent-secondary" />
                 </div>
-                <div className="text-sm font-semibold opacity-90">AI Receipt organization</div>
+                <div className="text-xs sm:text-sm font-semibold opacity-90">AI Receipt organization</div>
               </div>
-              <div className="mt-4 h-40 text-ink-900/70 dark:text-white/70">
+              <div className="mt-3 sm:mt-4 h-32 sm:h-40 text-ink-900/70 dark:text-white/70">
                 <DoodleReceipt />
               </div>
-              <div className="mt-4 text-sm leading-relaxed opacity-80">
+              <div className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed opacity-80">
                 Upload, tag, and keep receipts consistently — stop digging through inboxes and photo rolls.
               </div>
             </motion.div>
@@ -263,18 +264,18 @@ export default function Sections() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="rounded-3xl liquid-glass-card p-7"
+              className="rounded-2xl sm:rounded-3xl liquid-glass-card p-4 sm:p-6 md:p-7"
             >
               <div className="flex items-center gap-2 mb-3">
-                <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
-                  <Gauge size={18} className="text-accent-secondary" />
+                <div className="inline-flex items-center justify-center rounded-xl sm:rounded-2xl bg-accent-secondary/10 p-1.5 sm:p-2 shrink-0">
+                  <Gauge size={16} className="sm:w-[18px] sm:h-[18px] text-accent-secondary" />
                 </div>
-                <div className="text-sm font-semibold opacity-90">Smart Mileage tracking</div>
+                <div className="text-xs sm:text-sm font-semibold opacity-90">Smart Mileage tracking</div>
               </div>
-              <div className="mt-4 h-40 text-ink-900/70 dark:text-white/70">
+              <div className="mt-3 sm:mt-4 h-32 sm:h-40 text-ink-900/70 dark:text-white/70">
                 <DoodleMileage />
               </div>
-              <div className="mt-4 text-sm leading-relaxed opacity-80">
+              <div className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed opacity-80">
                 Trip logs that stay coherent over time — deductions become straightforward, not chaotic.
               </div>
             </motion.div>
@@ -283,86 +284,86 @@ export default function Sections() {
       </section>
 
       {/* Stats Marquee */}
-      <section className="mx-auto max-w-full overflow-hidden border-y border-black/5 py-6 dark:border-white/10">
+      <section className="mx-auto max-w-full overflow-hidden border-y border-black/5 py-4 sm:py-6 dark:border-white/10">
         <div className="relative w-full overflow-hidden">
           <div className="flex animate-marquee">
             {/* First set - правильный порядок как на картинке */}
-            <div className="mx-8 flex shrink-0 items-center gap-3">
-              <span className="text-2xl font-bold">50K+</span>
-              <span className="text-sm opacity-75">Active users</span>
+            <div className="mx-4 sm:mx-8 flex shrink-0 items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl font-bold">50K+</span>
+              <span className="text-xs sm:text-sm opacity-75">Active users</span>
             </div>
-            <div className="mx-8 flex shrink-0 items-center gap-3">
-              <span className="text-2xl font-bold">4.8</span>
-              <span className="text-xl">★</span>
-              <span className="text-sm opacity-75">Average rating</span>
+            <div className="mx-4 sm:mx-8 flex shrink-0 items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl font-bold">4.8</span>
+              <span className="text-lg sm:text-xl">★</span>
+              <span className="text-xs sm:text-sm opacity-75">Average rating</span>
             </div>
-            <div className="mx-8 flex shrink-0 items-center gap-3">
-              <span className="text-2xl font-bold">2M+</span>
-              <span className="text-sm opacity-75">Miles tracked</span>
+            <div className="mx-4 sm:mx-8 flex shrink-0 items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl font-bold">2M+</span>
+              <span className="text-xs sm:text-sm opacity-75">Miles tracked</span>
             </div>
-            <div className="mx-8 flex shrink-0 items-center gap-3">
-              <span className="text-2xl font-bold">100K+</span>
-              <span className="text-sm opacity-75">Reports generated</span>
+            <div className="mx-4 sm:mx-8 flex shrink-0 items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl font-bold">100K+</span>
+              <span className="text-xs sm:text-sm opacity-75">Reports generated</span>
             </div>
-            <div className="mx-8 flex shrink-0 items-center gap-3">
-              <span className="text-2xl font-bold">500K+</span>
-              <span className="text-sm opacity-75">Receipts scanned</span>
+            <div className="mx-4 sm:mx-8 flex shrink-0 items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl font-bold">500K+</span>
+              <span className="text-xs sm:text-sm opacity-75">Receipts scanned</span>
             </div>
             {/* Duplicate set for seamless loop */}
-            <div className="mx-8 flex shrink-0 items-center gap-3">
-              <span className="text-2xl font-bold">50K+</span>
-              <span className="text-sm opacity-75">Active users</span>
+            <div className="mx-4 sm:mx-8 flex shrink-0 items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl font-bold">50K+</span>
+              <span className="text-xs sm:text-sm opacity-75">Active users</span>
             </div>
-            <div className="mx-8 flex shrink-0 items-center gap-3">
-              <span className="text-2xl font-bold">4.8</span>
-              <span className="text-xl">★</span>
-              <span className="text-sm opacity-75">Average rating</span>
+            <div className="mx-4 sm:mx-8 flex shrink-0 items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl font-bold">4.8</span>
+              <span className="text-lg sm:text-xl">★</span>
+              <span className="text-xs sm:text-sm opacity-75">Average rating</span>
             </div>
-            <div className="mx-8 flex shrink-0 items-center gap-3">
-              <span className="text-2xl font-bold">2M+</span>
-              <span className="text-sm opacity-75">Miles tracked</span>
+            <div className="mx-4 sm:mx-8 flex shrink-0 items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl font-bold">2M+</span>
+              <span className="text-xs sm:text-sm opacity-75">Miles tracked</span>
             </div>
-            <div className="mx-8 flex shrink-0 items-center gap-3">
-              <span className="text-2xl font-bold">100K+</span>
-              <span className="text-sm opacity-75">Reports generated</span>
+            <div className="mx-4 sm:mx-8 flex shrink-0 items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl font-bold">100K+</span>
+              <span className="text-xs sm:text-sm opacity-75">Reports generated</span>
             </div>
-            <div className="mx-8 flex shrink-0 items-center gap-3">
-              <span className="text-2xl font-bold">500K+</span>
-              <span className="text-sm opacity-75">Receipts scanned</span>
+            <div className="mx-4 sm:mx-8 flex shrink-0 items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl font-bold">500K+</span>
+              <span className="text-xs sm:text-sm opacity-75">Receipts scanned</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="inline-flex items-center gap-2 rounded-2xl liquid-glass-badge px-4 py-2 text-xs font-medium mb-4">
               <Sparkles size={12} className="text-accent-secondary" />
               <span>Benefits</span>
             </div>
-            <h2 className="mt-2 font-[var(--font-ibm)] text-5xl font-extrabold tracking-tight">
+            <h2 className="mt-2 font-[var(--font-ibm)] text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
               Turn Receipt Chaos Into <span className="sexy-gradient">Tax Gold</span>
             </h2>
-            <p className="mt-4 max-w-2xl text-xl leading-relaxed opacity-95 font-semibold">
+            <p className="mt-3 sm:mt-4 max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed opacity-95 font-semibold">
               Stop losing money on missed deductions. Our AI finds every dollar you're entitled to — 
-              <span className="font-extrabold text-accent-secondary text-2xl"> automatically, accurately, instantly.</span>
+              <span className="font-extrabold text-accent-secondary text-xl sm:text-2xl"> automatically, accurately, instantly.</span>
               <br />
-              <span className="text-base opacity-80 mt-2 block font-normal">
+              <span className="text-xs sm:text-sm md:text-base opacity-80 mt-2 block font-normal">
                 🇺🇸 IRS compliant • 🇨🇦 CRA compliant • Works in all 50 states & 13 provinces
               </span>
             </p>
           </div>
           <a
             href="#lead"
-            className="inline-flex items-center justify-center rounded-2xl liquid-glass-button px-6 py-3.5 font-semibold"
+            className="inline-flex items-center justify-center rounded-2xl liquid-glass-button px-5 sm:px-6 py-3 sm:py-3.5 text-sm sm:text-base font-semibold mt-4 md:mt-0"
           >
             Get early access
           </a>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
           {features.map((f, idx) => (
             <motion.div
               key={f.title}
@@ -370,23 +371,23 @@ export default function Sections() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="group rounded-3xl liquid-glass-card p-7 transition-all hover:-translate-y-1"
+              className="group rounded-2xl sm:rounded-3xl liquid-glass-card p-5 sm:p-6 md:p-7 transition-all hover:-translate-y-1"
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-accent-secondary/20 to-accent-secondary/10 shadow-lg ring-1 ring-accent-secondary/10">
+              <div className="flex items-start justify-between mb-3 sm:mb-4">
+                <div className="inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-accent-secondary/20 to-accent-secondary/10 shadow-lg ring-1 ring-accent-secondary/10">
                   {f.icon}
                 </div>
                 {f.aiPowered && (
-                  <div className="inline-flex items-center gap-1 rounded-xl bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-2.5 py-1 text-[10px] font-semibold text-accent-secondary ring-1 ring-accent-secondary/20">
-                    <Sparkles size={10} />
+                  <div className="inline-flex items-center gap-1 rounded-lg sm:rounded-xl bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-2 sm:px-2.5 py-0.5 sm:py-1 text-[9px] sm:text-[10px] font-semibold text-accent-secondary ring-1 ring-accent-secondary/20">
+                    <Sparkles size={9} className="sm:w-2.5 sm:h-2.5" />
                     <span>AI</span>
                   </div>
                 )}
               </div>
-              <div className="font-[var(--font-ibm)] text-xl font-bold tracking-tight">{f.title}</div>
-              <p className="mt-3 text-sm leading-relaxed opacity-80">{f.desc}</p>
+              <div className="font-[var(--font-ibm)] text-lg sm:text-xl font-bold tracking-tight">{f.title}</div>
+              <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-relaxed opacity-80">{f.desc}</p>
               {f.benefit && (
-                <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-accent-secondary/10 px-3 py-1 text-xs font-semibold text-accent-secondary">
+                <div className="mt-2 sm:mt-3 inline-flex items-center gap-1.5 rounded-full bg-accent-secondary/10 px-2.5 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-semibold text-accent-secondary">
                   <span>💰</span>
                   <span>{f.benefit}</span>
                 </div>
@@ -399,13 +400,13 @@ export default function Sections() {
       <SocialProof />
 
       {/* Receipt Organization */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <h2 className="font-[var(--font-ibm)] text-3xl font-semibold">
+            <h2 className="font-[var(--font-ibm)] text-2xl sm:text-3xl font-semibold leading-tight">
               Your Receipts, Always Organized and Easy to Find
             </h2>
-            <p className="mt-4 text-sm leading-relaxed opacity-80">
+            <p className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed opacity-80">
               Snap photos or upload files of receipts and invoices. ReceiptOne processes and categorizes them with high accuracy, storing them neatly for easy searching, reporting, and tax purposes. Eliminate manual work and keep everything at your fingertips.
             </p>
           </div>
@@ -414,26 +415,26 @@ export default function Sections() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl bg-white/90 p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
+            className="rounded-2xl sm:rounded-3xl bg-white/90 p-4 sm:p-6 md:p-7 shadow-xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/10 dark:ring-white/10"
           >
-            <div className="flex items-center gap-2 mb-5">
-              <div className="inline-flex items-center justify-center rounded-2xl bg-accent-secondary/10 p-2">
-                <Sparkles size={16} className="text-accent-secondary" />
+            <div className="flex items-center gap-2 mb-4 sm:mb-5">
+              <div className="inline-flex items-center justify-center rounded-xl sm:rounded-2xl bg-accent-secondary/10 p-1.5 sm:p-2">
+                <Sparkles size={14} className="sm:w-4 sm:h-4 text-accent-secondary" />
               </div>
-              <div className="text-sm font-semibold opacity-90">AI Scan & Organize</div>
+              <div className="text-xs sm:text-sm font-semibold opacity-90">AI Scan & Organize</div>
             </div>
-            <div className="space-y-3">
-              <div className="rounded-2xl liquid-glass p-4">
-                <div className="text-xs opacity-60">04/30/2025</div>
-                <div className="font-semibold mt-1">Currys PC World</div>
-                <div className="text-xs mt-1 opacity-75">IT Supplies • $229</div>
+            <div className="space-y-2 sm:space-y-3">
+              <div className="rounded-xl sm:rounded-2xl liquid-glass p-3 sm:p-4">
+                <div className="text-[10px] sm:text-xs opacity-60">04/30/2025</div>
+                <div className="font-semibold mt-1 text-sm sm:text-base">Currys PC World</div>
+                <div className="text-[10px] sm:text-xs mt-1 opacity-75">IT Supplies • $229</div>
               </div>
-              <div className="rounded-2xl liquid-glass p-4">
-                <div className="text-xs opacity-60">04/29/2025</div>
-                <div className="font-semibold mt-1">SHELL GAS STATION</div>
-                <div className="text-xs mt-1 opacity-75">Fuel & Transportation • $29.50</div>
+              <div className="rounded-xl sm:rounded-2xl liquid-glass p-3 sm:p-4">
+                <div className="text-[10px] sm:text-xs opacity-60">04/29/2025</div>
+                <div className="font-semibold mt-1 text-sm sm:text-base">SHELL GAS STATION</div>
+                <div className="text-[10px] sm:text-xs mt-1 opacity-75">Fuel & Transportation • $29.50</div>
               </div>
-              <div className="rounded-2xl liquid-glass p-4">
+              <div className="rounded-xl sm:rounded-2xl liquid-glass p-3 sm:p-4">
                 <div className="text-xs opacity-60">04/28/2025</div>
                 <div className="font-semibold mt-1">Cafe Morgenrot</div>
                 <div className="text-xs mt-1 opacity-75">Miscellaneous • $6.50</div>
@@ -444,7 +445,7 @@ export default function Sections() {
       </section>
 
       {/* Email Receipts */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
             <motion.div
@@ -506,7 +507,7 @@ export default function Sections() {
             </motion.div>
           </div>
           <div className="order-1 lg:order-2">
-            <h2 className="font-[var(--font-ibm)] text-3xl font-semibold">
+            <h2 className="font-[var(--font-ibm)] text-2xl sm:text-3xl font-semibold leading-tight">
               Organize Email Receipts Without Lifting a Finger
             </h2>
             <p className="mt-4 text-sm leading-relaxed opacity-80">
@@ -517,10 +518,10 @@ export default function Sections() {
       </section>
 
       {/* Global Receipts & Reports */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <h2 className="font-[var(--font-ibm)] text-3xl font-semibold">
+            <h2 className="font-[var(--font-ibm)] text-2xl sm:text-3xl font-semibold leading-tight">
               Organize Receipts from Anywhere in the World
             </h2>
             <p className="mt-4 text-sm leading-relaxed opacity-80">
@@ -563,7 +564,7 @@ export default function Sections() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-14">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
             <motion.div
@@ -603,7 +604,7 @@ export default function Sections() {
             </motion.div>
           </div>
           <div className="order-1 lg:order-2">
-            <h2 className="font-[var(--font-ibm)] text-4xl font-bold tracking-tight">
+            <h2 className="font-[var(--font-ibm)] text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
               Turn Organized Receipts into Audit-Ready Reports
             </h2>
             <p className="mt-5 text-base leading-relaxed opacity-80">
@@ -614,10 +615,10 @@ export default function Sections() {
       </section>
 
       {/* Accountant & Integrations */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <h2 className="font-[var(--font-ibm)] text-4xl font-bold tracking-tight">
+            <h2 className="font-[var(--font-ibm)] text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
               Invite Your Accountant for Maximum Efficiency
             </h2>
             <p className="mt-5 text-base leading-relaxed opacity-80">
@@ -655,7 +656,7 @@ export default function Sections() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-14">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
             <div className="rounded-xl2 bg-white/70 p-6 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
@@ -689,7 +690,7 @@ export default function Sections() {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <h2 className="font-[var(--font-ibm)] text-3xl font-semibold">
+            <h2 className="font-[var(--font-ibm)] text-2xl sm:text-3xl font-semibold leading-tight">
               Integrate Seamlessly with Your Favorite Tools
             </h2>
             <p className="mt-4 text-sm leading-relaxed opacity-80">
@@ -700,13 +701,13 @@ export default function Sections() {
       </section>
 
       {/* Receipt Tracking Made Magical */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-4 py-1.5 text-xs font-bold text-accent-secondary mb-4">
             <span>💰</span>
             <span>$500M+ Found in Deductions</span>
           </div>
-          <h2 className="font-[var(--font-ibm)] text-5xl font-bold tracking-tight">
+          <h2 className="font-[var(--font-ibm)] text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight">
             <span className="bg-gradient-to-r from-accent-secondary via-accent-secondary/80 to-accent-secondary bg-clip-text text-transparent">
               $500M+ Found.
             </span>
@@ -726,7 +727,7 @@ export default function Sections() {
             <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
               Stay compliant & audit-ready
             </div>
-            <h3 className="font-[var(--font-ibm)] text-3xl font-semibold mb-4">
+            <h3 className="font-[var(--font-ibm)] text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 leading-tight">
               Turn your receipts into tax savings
             </h3>
             <ul className="space-y-3 text-sm opacity-80">
@@ -811,7 +812,7 @@ export default function Sections() {
             <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
               Organize your digital receipts
             </div>
-            <h3 className="font-[var(--font-ibm)] text-3xl font-semibold mb-4">
+            <h3 className="font-[var(--font-ibm)] text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 leading-tight">
               Automatically import email receipts
             </h3>
             <ul className="space-y-3 text-sm opacity-80">
@@ -829,14 +830,14 @@ export default function Sections() {
       </section>
 
       {/* Automatic Mileage Tracker & Deductions */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
         {/* Automatic mileage tracker */}
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
               Automatic mileage tracker
             </div>
-            <h3 className="font-[var(--font-ibm)] text-3xl font-semibold mb-4">
+            <h3 className="font-[var(--font-ibm)] text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 leading-tight">
               Write off $0.67 per mile you drive
             </h3>
             <ul className="space-y-3 text-sm opacity-80">
@@ -895,7 +896,7 @@ export default function Sections() {
       </section>
 
       {/* Connect accounts and find deductions */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
             <motion.div
@@ -958,7 +959,7 @@ export default function Sections() {
             <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
               Never miss a deduction
             </div>
-            <h3 className="font-[var(--font-ibm)] text-3xl font-semibold mb-4">
+            <h3 className="font-[var(--font-ibm)] text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 leading-tight">
               Connect your accounts and find deductions
             </h3>
             <ul className="space-y-3 text-sm opacity-80">
@@ -980,13 +981,13 @@ export default function Sections() {
       </section>
 
       {/* Professional PDF and Excel reports */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
               Professional PDF and Excel reports
             </div>
-            <h3 className="font-[var(--font-ibm)] text-3xl font-semibold mb-4">
+            <h3 className="font-[var(--font-ibm)] text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 leading-tight">
               Download reports at the tap of a button
             </h3>
             <ul className="space-y-3 text-sm opacity-80">

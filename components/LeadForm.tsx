@@ -55,23 +55,23 @@ export default function LeadForm() {
   }
 
   return (
-    <section id="lead" className="mx-auto max-w-6xl px-6 py-14">
+    <section id="lead" className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14">
       <div className="grid gap-6 lg:grid-cols-2">
-        <div className="rounded-xl2 bg-white/70 p-7 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-4 py-1.5 text-xs font-bold text-accent-secondary mb-3">
+        <div className="rounded-xl2 bg-white/70 p-5 sm:p-6 md:p-7 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold text-accent-secondary mb-2 sm:mb-3">
             <span>🎯</span>
             <span>Claim Your Free Trial</span>
           </div>
-          <h3 className="mt-2 font-[var(--font-ibm)] text-4xl font-extrabold tracking-tight">
+          <h3 className="mt-2 font-[var(--font-ibm)] text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
             Start Saving Money <span className="sexy-gradient">Today</span>
           </h3>
-          <p className="mt-4 text-lg opacity-95 font-semibold">
-            Join <span className="font-extrabold text-accent-secondary text-2xl">50,000+</span> smart business owners who are maximizing their tax refunds.
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg opacity-95 font-semibold">
+            Join <span className="font-extrabold text-accent-secondary text-xl sm:text-2xl">50,000+</span> smart business owners who are maximizing their tax refunds.
             <br />
-            <span className="text-base opacity-90 mt-2 block font-medium">
+            <span className="text-xs sm:text-sm md:text-base opacity-90 mt-2 block font-medium">
               🇺🇸 🇨🇦 No credit card required. Start your 7-day free trial now.
             </span>
-            <span className="text-sm opacity-75 mt-1 block font-normal">
+            <span className="text-xs sm:text-sm opacity-75 mt-1 block font-normal">
               Average user saves $3,200+ per year • IRS & CRA compliant
             </span>
           </p>
@@ -158,7 +158,7 @@ export default function LeadForm() {
             <button
               type="submit"
               disabled={!canSubmit || status === "loading" || status === "success"}
-              className="mt-4 inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-accent-primary via-accent-primary to-accent-primary/90 px-6 py-4 font-bold text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100"
+              className="mt-4 inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-accent-primary via-accent-primary to-accent-primary/90 px-5 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100"
             >
               {status === "loading" ? (
                 <>
