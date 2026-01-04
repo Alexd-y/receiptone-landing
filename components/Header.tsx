@@ -41,7 +41,7 @@ export default function Header() {
             </a>
             <a
               href="/signup"
-              className="rounded-2xl bg-ink-900 dark:bg-ink-800 px-4 lg:px-5 py-2 lg:py-2.5 text-xs lg:text-sm font-semibold text-white shadow-xl transition-all hover:scale-105 active:scale-95 liquid-glass-button"
+              className="rounded-2xl bg-ink-900 dark:bg-ink-800 px-4 lg:px-5 py-2 lg:py-2.5 text-xs lg:text-sm font-semibold text-white shadow-xl transition-all hover:scale-105 active:scale-95"
             >
               Sign up
             </a>
@@ -95,7 +95,7 @@ export default function Header() {
             <a
               href="/signup"
               onClick={() => setIsMenuOpen(false)}
-              className="rounded-2xl bg-ink-900 dark:bg-ink-800 px-4 py-3 text-base font-semibold text-white shadow-xl transition-all active:scale-95 liquid-glass-button text-center mt-2"
+              className="rounded-2xl bg-ink-900 dark:bg-ink-800 px-4 py-3 text-base font-semibold text-white shadow-xl transition-all active:scale-95 text-center mt-2"
             >
               Sign up
             </a>
