@@ -55,41 +55,84 @@ export default function CTAButtons({ onPrimaryClick }: Props) {
       <LoopArrow />
 
       {/* Primary Button - Get early access (черная кнопка с белым текстом) */}
-      <button
+      <motion.button
         type="button"
         onClick={onPrimaryClick}
-        className="relative z-10 inline-flex flex-row items-center justify-center gap-3 rounded-xl bg-accent-primary px-6 py-4 font-medium text-white shadow-md transition-all hover:shadow-lg min-w-0"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.98 }}
+        className="relative z-10 inline-flex flex-row items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-accent-primary via-accent-primary to-accent-primary/90 px-8 py-5 font-bold text-white shadow-2xl transition-all hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] min-w-0 group overflow-hidden"
       >
+        {/* Animated gradient overlay */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-accent-secondary/20 via-transparent to-accent-secondary/20"
+          animate={{
+            x: ['-100%', '100%'],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
         {/* Sparkles icon слева */}
-        <Sparkles size={18} />
-        <span className="text-base leading-tight text-left">Get early<br />access</span>
-      </button>
+        <Sparkles size={20} className="relative z-10 animate-pulse" />
+        <span className="relative z-10 text-lg leading-tight text-left font-bold">
+          Claim Your<br />
+          <span className="text-accent-secondary">Free Trial</span>
+        </span>
+        {/* Arrow icon */}
+        <motion.svg
+          className="relative z-10 w-5 h-5 ml-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          animate={{ x: [0, 5, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </motion.svg>
+      </motion.button>
 
       {/* Secondary Buttons - светлые бежевые кнопки в одну строчку */}
       <div className="flex flex-nowrap gap-3">
         {/* Start free - светлая бежевая кнопка с темным текстом */}
-        <a
+        <motion.a
           href="#pricing"
-          className="relative z-10 inline-flex flex-col items-center justify-center rounded-xl bg-sand-100 px-6 py-4 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 text-center min-w-[120px]"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          className="relative z-10 inline-flex flex-col items-center justify-center rounded-2xl liquid-glass-button px-6 py-4 font-bold text-ink-900 dark:text-white text-center min-w-[120px] group"
         >
-          <span className="text-base leading-tight">Start<br />free</span>
-        </a>
+          <span className="text-base leading-tight">
+            <span className="text-accent-secondary">7-Day</span><br />
+            Free Trial
+          </span>
+        </motion.a>
 
         {/* Book a demo - светлая бежевая кнопка с темным текстом, без иконки */}
-        <a
+        <motion.a
           href="#lead"
-          className="relative z-10 inline-flex flex-col items-center justify-center rounded-xl bg-sand-100 px-6 py-4 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 text-center min-w-[120px]"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          className="relative z-10 inline-flex flex-col items-center justify-center rounded-2xl liquid-glass-button px-6 py-4 font-bold text-ink-900 dark:text-white text-center min-w-[120px]"
         >
-          <span className="text-base leading-tight">Book a<br />demo</span>
-        </a>
+          <span className="text-base leading-tight">
+            See It<br />
+            Live Demo
+          </span>
+        </motion.a>
 
         {/* Download app - светлая бежевая кнопка с темным текстом, без иконки */}
-        <a
+        <motion.a
           href="#stores"
-          className="relative z-10 inline-flex flex-col items-center justify-center rounded-xl bg-sand-100 px-6 py-4 font-medium text-ink-900 shadow-md ring-1 ring-black/5 transition-all hover:shadow-lg dark:bg-white/10 dark:text-white dark:ring-white/10 text-center min-w-[120px]"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          className="relative z-10 inline-flex flex-col items-center justify-center rounded-2xl liquid-glass-button px-6 py-4 font-bold text-ink-900 dark:text-white text-center min-w-[120px]"
         >
-          <span className="text-base leading-tight">Download<br />app</span>
-        </a>
+          <span className="text-base leading-tight">
+            Get Mobile<br />
+            App Now
+          </span>
+        </motion.a>
       </div>
     </div>
   );

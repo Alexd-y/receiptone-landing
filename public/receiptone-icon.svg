@@ -1,0 +1,37 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#F5F1E9"/>
+
+  <!-- R1 rounded square container -->
+  <rect x="116" y="80" width="280" height="280" rx="40" ry="40" fill="#F5F1E9" stroke="#1C1C1C" stroke-width="4"/>
+
+  <!-- Letter R -->
+  <path
+    d="M178 320 L178 152
+       L238 152
+       Q288 152 288 198
+       Q288 228 264 244
+       L302 320
+       L272 320
+       L240 256
+       L208 256
+       L208 320 Z
+       M208 176 L208 232
+       L236 232
+       Q260 232 260 206
+       Q260 176 232 176 Z"
+    fill="#1C1C1C"
+  />
+
+  <!-- Number 1 -->
+  <path
+    d="M320 320 L320 192
+       L292 212
+       L280 196
+       L322 164
+       L344 164
+       L344 320 Z"
+    fill="#4CAF93"
+  />
+</svg>
+

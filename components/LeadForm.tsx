@@ -58,13 +58,22 @@ export default function LeadForm() {
     <section id="lead" className="mx-auto max-w-6xl px-6 py-14">
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-xl2 bg-white/70 p-7 shadow-glass ring-1 ring-black/5 backdrop-blur-md dark:bg-white/10 dark:ring-white/10">
-          <div className="text-sm font-medium opacity-80">Get early access</div>
-          <h3 className="mt-2 font-[var(--font-ibm)] text-2xl font-semibold">
-            Be first to try ReceiptOne Web
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 px-4 py-1.5 text-xs font-bold text-accent-secondary mb-3">
+            <span>🎯</span>
+            <span>Claim Your Free Trial</span>
+          </div>
+          <h3 className="mt-2 font-[var(--font-ibm)] text-4xl font-extrabold tracking-tight">
+            Start Saving Money <span className="sexy-gradient">Today</span>
           </h3>
-          <p className="mt-3 text-sm opacity-80">
-            Leave your email and role — we’ll invite you to early access, send onboarding details, and help you set up a
-            fast workflow with your receipts and mileage.
+          <p className="mt-4 text-lg opacity-95 font-semibold">
+            Join <span className="font-extrabold text-accent-secondary text-2xl">50,000+</span> smart business owners who are maximizing their tax refunds.
+            <br />
+            <span className="text-base opacity-90 mt-2 block font-medium">
+              🇺🇸 🇨🇦 No credit card required. Start your 7-day free trial now.
+            </span>
+            <span className="text-sm opacity-75 mt-1 block font-normal">
+              Average user saves $3,200+ per year • IRS & CRA compliant
+            </span>
           </p>
 
           <form className="mt-6 grid gap-3" onSubmit={(e) => { e.preventDefault(); submit(); }}>
@@ -149,14 +158,38 @@ export default function LeadForm() {
             <button
               type="submit"
               disabled={!canSubmit || status === "loading" || status === "success"}
-              className="mt-3 inline-flex items-center justify-center rounded-xl bg-accent-primary px-5 py-3 font-medium text-white shadow-soft transition hover:translate-y-[-1px] hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-50"
+              className="mt-4 inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-accent-primary via-accent-primary to-accent-primary/90 px-6 py-4 font-bold text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100"
             >
-              {status === "loading" ? "Submitting..." : status === "success" ? "Submitted" : "Request early access"}
+              {status === "loading" ? (
+                <>
+                  <span className="animate-spin">⏳</span>
+                  <span>Processing...</span>
+                </>
+              ) : status === "success" ? (
+                <>
+                  <span>✅</span>
+                  <span>You're In!</span>
+                </>
+              ) : (
+                <>
+                  <span>🚀</span>
+                  <span>Start Free Trial Now</span>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </>
+              )}
             </button>
 
             {status === "success" && (
-              <div className="rounded-xl bg-accent-secondary/10 p-4 text-sm text-accent-secondary">
-                Success. You’re on the list — we’ll reach out with early access details.
+              <div className="rounded-2xl bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/10 p-5 text-base font-semibold text-accent-secondary border border-accent-secondary/20">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-2xl">🎉</span>
+                  <span>You're In! Check Your Email</span>
+                </div>
+                <p className="text-sm opacity-90 font-normal">
+                  We've sent you early access details. Start saving money on taxes today!
+                </p>
               </div>
             )}
 
